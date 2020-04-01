@@ -112,3 +112,6 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .pnp.*
+
+# Files generated during builds
+junit.xml
