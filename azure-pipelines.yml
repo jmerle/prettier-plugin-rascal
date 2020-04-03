@@ -2,10 +2,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - task: Gradle@2
+  - task: yarn build:parser
     displayName: Build parser
-    inputs:
-      cwd: rascal-parser
 
   - script: yarn --frozen-lockfile
     displayName: Install plugin dependencies
