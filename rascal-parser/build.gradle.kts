@@ -1,12 +1,11 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import java.net.URL
 import org.apache.commons.io.FileUtils
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import java.net.URL
 
 plugins {
   kotlin("jvm") version "1.3.71"
   id("com.github.johnrengelman.shadow") version "5.2.0"
-  id("org.jlleitschuh.gradle.ktlint") version "9.2.1"
 }
 
 buildscript {
@@ -41,13 +40,6 @@ dependencies {
   implementation(kotlin("stdlib-jdk8"))
   implementation(urlFile("https://update.rascal-mpl.org/console/rascal-0.16.3.jar", "rascal-0.16.3"))
   implementation("com.github.salomonbrys.kotson:kotson:2.5.0")
-}
-
-ktlint {
-  filter {
-    exclude("**/generated/**")
-    include("**/kotlin/**")
-  }
 }
 
 tasks {
