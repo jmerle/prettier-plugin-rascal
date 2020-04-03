@@ -16,9 +16,9 @@ export function parse(text: string, parsers: Plugin['parsers'], options: ParserO
 }
 
 export function locStart(node: ASTNode): number {
-  return node.start;
+  return node._start;
 }
 
 export function locEnd(node: ASTNode): number {
-  return node.end;
+  return node._end;
 }

@@ -5,11 +5,7 @@ const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (path: FastPath<ASTNode>) => Doc): Doc {
   const node = path.getValue();
 
-  if (Array.isArray(node)) {
-    return concat(path.map(print));
-  }
-
-  switch (node.type) {
+  switch (node._type) {
     case 'Assignable.Annotation':
       // TODO(jmerle): Implement
       console.log(node);
@@ -916,9 +912,15 @@ export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (p
       throw new Error("Node type 'FunctionType.TypeArguments' is not implemented yet");
 
     case 'Header.Default':
-      // TODO(jmerle): Implement
       console.log(node);
-      throw new Error("Node type 'Header.Default' is not implemented yet");
+      return concat([
+        path.call(print, 'tags'),
+        'module ',
+        path.call(print, 'name'),
+        hardline,
+        hardline,
+        ...path.map(print, 'imports'),
+      ]);
 
     case 'Header.Parameters':
       // TODO(jmerle): Implement
@@ -931,9 +933,7 @@ export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (p
       throw new Error("Node type 'HexIntegerLiteral.Lexical' is not implemented yet");
 
     case 'Import.Default':
-      // TODO(jmerle): Implement
-      console.log(node);
-      throw new Error("Node type 'Import.Default' is not implemented yet");
+      return concat(['import ', path.call(print, 'module'), ';', hardline]);
 
     case 'Import.Extend':
       // TODO(jmerle): Implement
@@ -961,9 +961,7 @@ export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (p
       throw new Error("Node type 'ImportedModule.ActualsRenaming' is not implemented yet");
 
     case 'ImportedModule.Default':
-      // TODO(jmerle): Implement
-      console.log(node);
-      throw new Error("Node type 'ImportedModule.Default' is not implemented yet");
+      return path.call(print, 'name');
 
     case 'ImportedModule.Renamings':
       // TODO(jmerle): Implement
@@ -1161,9 +1159,7 @@ export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (p
       throw new Error("Node type 'MidStringChars.Lexical' is not implemented yet");
 
     case 'Module.Default':
-      // TODO(jmerle): Implement
-      console.log(node);
-      throw new Error("Node type 'Module.Default' is not implemented yet");
+      return concat([path.call(print, 'header'), path.call(print, 'body')]);
 
     case 'ModuleActuals.Default':
       // TODO(jmerle): Implement
@@ -1176,9 +1172,7 @@ export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (p
       throw new Error("Node type 'ModuleParameters.Default' is not implemented yet");
 
     case 'Name.Lexical':
-      // TODO(jmerle): Implement
-      console.log(node);
-      throw new Error("Node type 'Name.Lexical' is not implemented yet");
+      return node.string;
 
     case 'NamedBackslash.Lexical':
       // TODO(jmerle): Implement
@@ -1371,9 +1365,7 @@ export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (p
       throw new Error("Node type 'ProtocolTail.Post' is not implemented yet");
 
     case 'QualifiedName.Default':
-      // TODO(jmerle): Implement
-      console.log(node);
-      throw new Error("Node type 'QualifiedName.Default' is not implemented yet");
+      return join('::', path.map(print, 'names'));
 
     case 'Range.Character':
       // TODO(jmerle): Implement
@@ -1916,9 +1908,7 @@ export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (p
       throw new Error("Node type 'Tag.Expression' is not implemented yet");
 
     case 'Tags.Default':
-      // TODO(jmerle): Implement
-      console.log(node);
-      throw new Error("Node type 'Tags.Default' is not implemented yet");
+      return concat(path.map(print, 'tags'));
 
     case 'TagString.Lexical':
       // TODO(jmerle): Implement
@@ -2070,6 +2060,4 @@ export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (p
       console.log(node);
       throw new Error("Node type 'Visit.GivenStrategy' is not implemented yet");
   }
-
-  throw new Error(`Unknown node type: ${node.type}`);
 }

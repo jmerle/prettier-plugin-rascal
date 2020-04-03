@@ -3004,12 +3004,10 @@ object ASTConverter : IASTVisitor<JsonObject> {
   }
 
   private fun createNode(x: AbstractAST, type: String, content: JsonObject): JsonObject {
-    return jsonObject(
-      "type" to type,
-      "start" to x.location.offset,
-      "end" to x.location.offset + x.location.length,
-      "content" to content
-    )
+    content["_type"] = type
+    content["_start"] = x.location.offset
+    content["_end"] = x.location.offset + x.location.length
+    return content
   }
 
   private fun List<AbstractAST>.accept(visitor: IASTVisitor<*>): JsonArray {
