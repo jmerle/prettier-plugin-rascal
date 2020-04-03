@@ -2,7 +2,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - task: yarn build:parser
+  - script: yarn build:parser
     displayName: Build parser
 
   - script: yarn --frozen-lockfile
