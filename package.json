@@ -18,7 +18,8 @@
     "/lib"
   ],
   "scripts": {
-    "start": "yarn build && prettier --plugin=./dist",
+    "start": "yarn build && prettier --plugin ./dist",
+    "start:skip-parser": "yarn build:plugin && prettier --plugin ./dist",
     "build": "rimraf dist && yarn build:parser && yarn build:plugin",
     "build:parser": "./rascal-parser/gradlew -p rascal-parser shadowJar",
     "build:plugin": "tsc --project .",

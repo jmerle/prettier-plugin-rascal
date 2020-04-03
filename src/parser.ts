@@ -15,10 +15,10 @@ export function parse(text: string, parsers: Plugin['parsers'], options: ParserO
   return ast;
 }
 
-export function locStart(node: any): number {
+export function locStart(node: ASTNode): number {
   return node.start;
 }
 
-export function locEnd(node: any): number {
+export function locEnd(node: ASTNode): number {
   return node.end;
 }
