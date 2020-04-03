@@ -2,11 +2,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+  - script: yarn --frozen-lockfile
+    displayName: Install dependencies
+
   - script: yarn build:parser
     displayName: Build parser
-
-  - script: yarn --frozen-lockfile
-    displayName: Install plugin dependencies
 
   - script: yarn lint
     displayName: Lint plugin

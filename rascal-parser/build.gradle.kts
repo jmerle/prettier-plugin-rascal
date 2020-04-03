@@ -1,7 +1,7 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-import java.net.URL
 import org.apache.commons.io.FileUtils
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.net.URL
 
 plugins {
   kotlin("jvm") version "1.3.71"
@@ -25,11 +25,12 @@ repositories {
   jcenter()
 }
 
-fun urlFile(url: String, name: String): ConfigurableFileCollection {
-  val file = File("$buildDir/downloads/$name.jar")
+fun jarFromUrl(url: String): ConfigurableFileCollection {
+  val file = File("$buildDir/downloads/${url.split("/").last()}")
 
   if (!file.exists()) {
     file.parentFile.mkdirs()
+    println("Downloading $url")
     FileUtils.copyURLToFile(URL(url), file)
   }
 
@@ -38,7 +39,7 @@ fun urlFile(url: String, name: String): ConfigurableFileCollection {
 
 dependencies {
   implementation(kotlin("stdlib-jdk8"))
-  implementation(urlFile("https://update.rascal-mpl.org/console/rascal-0.16.3.jar", "rascal-0.16.3"))
+  implementation(jarFromUrl("https://update.rascal-mpl.org/console/rascal-0.16.3.jar"))
   implementation("com.github.salomonbrys.kotson:kotson:2.5.0")
 }
 
