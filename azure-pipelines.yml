@@ -3,35 +3,35 @@ pool:
 
 steps:
   - task: Gradle@2
-    displayName: Lint Kotlin
+    displayName: Lint parser
     inputs:
       cwd: rascal-parser
       tasks: ktlintCheck
 
   - task: Gradle@2
-    displayName: Build Kotlin
+    displayName: Build parser
     inputs:
       cwd: rascal-parser
 
   - script: yarn --frozen-lockfile
-    displayName: Install TypeScript dependencies
+    displayName: Install plugin dependencies
 
   - script: yarn lint
-    displayName: Lint TypeScript
+    displayName: Lint plugin
 
-  - script: yarn build
-    displayName: Build TypeScript
+  - script: yarn build:plugin
+    displayName: Build plugin
 
   - script: yarn jest --ci --reporters=default --reporters=jest-junit --coverage --coverageReporters=cobertura --coverageReporters=text
-    displayName: Test TypeScript
+    displayName: Test plugin
 
   - task: PublishTestResults@2
-    displayName: Publish TypeScript test results
+    displayName: Publish plugin test results
     inputs:
       testResultsFiles: junit.xml
 
   - task: PublishCodeCoverageResults@1
-    displayName: Publish TypeScript coverage results
+    displayName: Publish plugin coverage results
     inputs:
       codeCoverageTool: cobertura
       summaryFileLocation: coverage/cobertura-coverage.xml

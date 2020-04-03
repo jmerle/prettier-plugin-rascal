@@ -152,9 +152,5 @@ gradle-app.setting
 
 # End of https://www.gitignore.io/api/node,gradle,kotlin
 
-# Files generated during builds
+# Files generated during CI builds
 junit.xml
-
-# rascal-parser jar files
-!/rascal-parser/lib/**
-!/lib/**

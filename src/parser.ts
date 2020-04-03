@@ -3,7 +3,7 @@ import { AST, ParserOptions, Plugin } from 'prettier';
 import * as execa from 'execa';
 
 export function parse(text: string, parsers: Plugin['parsers'], options: ParserOptions): AST {
-  const jarFile = path.resolve(__dirname, '../lib/rascal-parser.jar');
+  const jarFile = path.resolve(__dirname, 'rascal-parser.jar');
   const { stdout } = execa.sync('java', ['-jar', jarFile], { input: text });
 
   const ast = JSON.parse(stdout);

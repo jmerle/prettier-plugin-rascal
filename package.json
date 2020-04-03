@@ -19,7 +19,9 @@
   ],
   "scripts": {
     "start": "yarn build && prettier --plugin=./dist",
-    "build": "rimraf dist && tsc --project .",
+    "build": "rimraf dist && yarn build:parser && yarn build:plugin",
+    "build:parser": "./rascal-parser/gradlew -p rascal-parser shadowJar",
+    "build:plugin": "tsc --project .",
     "test": "jest",
     "test:coverage": "rimraf coverage && jest --coverage",
     "lint": "yarn lint:eslint && yarn lint:prettier",
