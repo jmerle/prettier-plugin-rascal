@@ -2,25 +2,36 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+  - task: Gradle@2
+    displayName: Lint Kotlin
+    inputs:
+      cwd: rascal-parser
+      tasks: ktlintCheck
+
+  - task: Gradle@2
+    displayName: Build Kotlin
+    inputs:
+      cwd: rascal-parser
+
   - script: yarn --frozen-lockfile
-    displayName: Install dependencies
+    displayName: Install TypeScript dependencies
 
   - script: yarn lint
-    displayName: Lint
+    displayName: Lint TypeScript
 
   - script: yarn build
-    displayName: Build
+    displayName: Build TypeScript
 
   - script: yarn jest --ci --reporters=default --reporters=jest-junit --coverage --coverageReporters=cobertura --coverageReporters=text
-    displayName: Test
+    displayName: Test TypeScript
 
   - task: PublishTestResults@2
-    displayName: Publish test results
+    displayName: Publish TypeScript test results
     inputs:
       testResultsFiles: junit.xml
 
   - task: PublishCodeCoverageResults@1
-    displayName: Publish coverage results
+    displayName: Publish TypeScript coverage results
     inputs:
       codeCoverageTool: cobertura
       summaryFileLocation: coverage/cobertura-coverage.xml

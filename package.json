@@ -14,9 +14,11 @@
     "rascal"
   ],
   "files": [
-    "/dist"
+    "/dist",
+    "/lib"
   ],
   "scripts": {
+    "start": "yarn build && prettier --plugin=./dist",
     "build": "rimraf dist && tsc --project .",
     "test": "jest",
     "test:coverage": "rimraf coverage && jest --coverage",
@@ -29,7 +31,10 @@
     "release": "np",
     "prepublishOnly": "yarn build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "execa": "^4.0.0",
+    "tslib": "^1.11.1"
+  },
   "devDependencies": {
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.8",
@@ -74,6 +79,7 @@
       "@typescript-eslint/explicit-member-accessibility": "error",
       "@typescript-eslint/no-inferrable-types": "off",
       "import/order": "error",
+      "import/namespace": "off",
       "no-constant-condition": [
         "error",
         {
