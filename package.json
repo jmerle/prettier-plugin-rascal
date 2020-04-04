@@ -20,6 +20,9 @@
   "scripts": {
     "start": "yarn build && prettier --plugin ./dist",
     "start:skip-parser": "yarn build:plugin && prettier --plugin ./dist",
+    "generate": "yarn generate:ast-converter && yarn generate:types",
+    "generate:ast-converter": "ts-node scripts/ast-converter-generator.ts",
+    "generate:types": "ts-node scripts/types-generator",
     "build": "rimraf dist && yarn build:parser && yarn build:plugin",
     "build:parser": "./rascal-parser/gradlew -p rascal-parser shadowJar",
     "build:plugin": "tsc --project .",
