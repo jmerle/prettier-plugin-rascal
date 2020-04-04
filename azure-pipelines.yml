@@ -5,10 +5,8 @@ steps:
   - script: yarn --frozen-lockfile
     displayName: Install dependencies
 
-  - script: yarn build:parser
+  - script: yarn build:parser --scan
     displayName: Build parser
-    env:
-      GRADLE_OPTS: -Dorg.gradle.daemon=false
 
   - script: yarn lint
     displayName: Lint plugin
