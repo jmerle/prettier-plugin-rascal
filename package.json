@@ -30,7 +30,7 @@
     "test": "jest",
     "test:coverage": "rimraf coverage && jest --coverage",
     "lint": "yarn lint:eslint && yarn lint:prettier",
-    "lint:eslint": "eslint --format codeframe 'src/**' 'tests/**' 'scripts/**'",
+    "lint:eslint": "eslint --format codeframe 'src/**/*.ts' 'tests/**/*.ts' 'scripts/**/*.ts'",
     "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.{yml,json}'",
     "fix": "yarn fix:eslint && yarn fix:prettier",
     "fix:eslint": "yarn lint:eslint --fix",
