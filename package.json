@@ -20,9 +20,10 @@
   "scripts": {
     "start": "yarn build && prettier --plugin ./dist",
     "start:skip-parser": "yarn build:plugin && prettier --plugin ./dist",
-    "generate": "yarn generate:ast-converter && yarn generate:types",
+    "generate": "yarn generate:ast-converter && yarn generate:types && yarn generate:printer",
     "generate:ast-converter": "ts-node scripts/ast-converter-generator.ts",
     "generate:types": "ts-node scripts/types-generator",
+    "generate:printer": "ts-node scripts/printer-generator",
     "build": "rimraf dist && yarn build:parser && yarn build:plugin",
     "build:parser": "./rascal-parser/gradlew -p rascal-parser shadowJar",
     "build:plugin": "tsc --project .",
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
+    "@types/lodash.kebabcase": "^4.1.6",
     "@types/node": "^13.9.8",
     "@types/prettier": "^1.19.1",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
@@ -55,6 +57,7 @@
     "jest": "^25.2.4",
     "jest-junit": "^10.0.0",
     "lint-staged": "^10.1.1",
+    "lodash.kebabcase": "^4.1.1",
     "np": "^6.2.0",
     "prettier": "^2.0.2",
     "rimraf": "^3.0.2",
@@ -84,6 +87,9 @@
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/explicit-member-accessibility": "error",
       "@typescript-eslint/no-inferrable-types": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/class-name-casing": "off",
       "import/order": "error",
       "import/namespace": "off",
       "no-constant-condition": [
