@@ -5,7 +5,7 @@ steps:
   - script: yarn --frozen-lockfile
     displayName: Install dependencies
 
-  - script: yarn build:parser --scan
+  - script: yarn build:parser
     displayName: Build parser
 
   - script: yarn lint
