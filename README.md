@@ -8,4 +8,4 @@
 
 Format Rascal code using Prettier.
 
-This project is a work-in-progress.
+This project is a work-in-progress. I have no idea whether I will ever finish it, but it's a fun side project at the time of writing this.
