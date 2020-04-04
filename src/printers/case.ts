@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printCaseDefault(
+export function printCaseDefaultNode(
   path: FastPath<CaseDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printCaseDefault(
   throw new Error("Node type 'Case.Default' is not implemented yet");
 }
 
-export function printCasePatternWithAction(
+export function printCasePatternWithActionNode(
   path: FastPath<CasePatternWithActionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

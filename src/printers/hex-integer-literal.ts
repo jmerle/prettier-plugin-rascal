@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printHexIntegerLiteralLexical(
+export function printHexIntegerLiteralLexicalNode(
   path: FastPath<HexIntegerLiteralLexicalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

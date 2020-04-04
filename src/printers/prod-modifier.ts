@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printProdModifierAssociativity(
+export function printProdModifierAssociativityNode(
   path: FastPath<ProdModifierAssociativityNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printProdModifierAssociativity(
   throw new Error("Node type 'ProdModifier.Associativity' is not implemented yet");
 }
 
-export function printProdModifierBracket(
+export function printProdModifierBracketNode(
   path: FastPath<ProdModifierBracketNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printProdModifierBracket(
   throw new Error("Node type 'ProdModifier.Bracket' is not implemented yet");
 }
 
-export function printProdModifierTag(
+export function printProdModifierTagNode(
   path: FastPath<ProdModifierTagNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

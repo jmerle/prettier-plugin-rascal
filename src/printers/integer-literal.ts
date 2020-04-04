@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printIntegerLiteralDecimalIntegerLiteral(
+export function printIntegerLiteralDecimalIntegerLiteralNode(
   path: FastPath<IntegerLiteralDecimalIntegerLiteralNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printIntegerLiteralDecimalIntegerLiteral(
   throw new Error("Node type 'IntegerLiteral.DecimalIntegerLiteral' is not implemented yet");
 }
 
-export function printIntegerLiteralHexIntegerLiteral(
+export function printIntegerLiteralHexIntegerLiteralNode(
   path: FastPath<IntegerLiteralHexIntegerLiteralNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printIntegerLiteralHexIntegerLiteral(
   throw new Error("Node type 'IntegerLiteral.HexIntegerLiteral' is not implemented yet");
 }
 
-export function printIntegerLiteralOctalIntegerLiteral(
+export function printIntegerLiteralOctalIntegerLiteralNode(
   path: FastPath<IntegerLiteralOctalIntegerLiteralNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

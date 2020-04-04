@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printProtocolTailMid(
+export function printProtocolTailMidNode(
   path: FastPath<ProtocolTailMidNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printProtocolTailMid(
   throw new Error("Node type 'ProtocolTail.Mid' is not implemented yet");
 }
 
-export function printProtocolTailPost(
+export function printProtocolTailPostNode(
   path: FastPath<ProtocolTailPostNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

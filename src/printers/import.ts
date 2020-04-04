@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printImportDefault(
+export function printImportDefaultNode(
   path: FastPath<ImportDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printImportDefault(
   throw new Error("Node type 'Import.Default' is not implemented yet");
 }
 
-export function printImportExtend(
+export function printImportExtendNode(
   path: FastPath<ImportExtendNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printImportExtend(
   throw new Error("Node type 'Import.Extend' is not implemented yet");
 }
 
-export function printImportExternal(
+export function printImportExternalNode(
   path: FastPath<ImportExternalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printImportExternal(
   throw new Error("Node type 'Import.External' is not implemented yet");
 }
 
-export function printImportSyntax(
+export function printImportSyntaxNode(
   path: FastPath<ImportSyntaxNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

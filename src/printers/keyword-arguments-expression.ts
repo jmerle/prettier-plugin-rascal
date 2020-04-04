@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printKeywordArguments_ExpressionDefault(
+export function printKeywordArguments_ExpressionDefaultNode(
   path: FastPath<KeywordArguments_ExpressionDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printKeywordArguments_ExpressionDefault(
   throw new Error("Node type 'KeywordArguments_Expression.Default' is not implemented yet");
 }
 
-export function printKeywordArguments_ExpressionNone(
+export function printKeywordArguments_ExpressionNoneNode(
   path: FastPath<KeywordArguments_ExpressionNoneNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

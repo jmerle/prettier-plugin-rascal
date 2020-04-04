@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printVariableInitialized(
+export function printVariableInitializedNode(
   path: FastPath<VariableInitializedNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printVariableInitialized(
   throw new Error("Node type 'Variable.Initialized' is not implemented yet");
 }
 
-export function printVariableUnInitialized(
+export function printVariableUnInitializedNode(
   path: FastPath<VariableUnInitializedNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

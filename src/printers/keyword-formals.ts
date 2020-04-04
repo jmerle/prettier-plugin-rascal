@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printKeywordFormalsDefault(
+export function printKeywordFormalsDefaultNode(
   path: FastPath<KeywordFormalsDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printKeywordFormalsDefault(
   throw new Error("Node type 'KeywordFormals.Default' is not implemented yet");
 }
 
-export function printKeywordFormalsNone(
+export function printKeywordFormalsNoneNode(
   path: FastPath<KeywordFormalsNoneNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

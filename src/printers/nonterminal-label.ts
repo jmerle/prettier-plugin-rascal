@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printNonterminalLabelLexical(
+export function printNonterminalLabelLexicalNode(
   path: FastPath<NonterminalLabelLexicalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

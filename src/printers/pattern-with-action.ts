@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printPatternWithActionArbitrary(
+export function printPatternWithActionArbitraryNode(
   path: FastPath<PatternWithActionArbitraryNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printPatternWithActionArbitrary(
   throw new Error("Node type 'PatternWithAction.Arbitrary' is not implemented yet");
 }
 
-export function printPatternWithActionReplacing(
+export function printPatternWithActionReplacingNode(
   path: FastPath<PatternWithActionReplacingNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

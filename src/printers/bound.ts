@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printBoundDefault(
+export function printBoundDefaultNode(
   path: FastPath<BoundDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printBoundDefault(
   throw new Error("Node type 'Bound.Default' is not implemented yet");
 }
 
-export function printBoundEmpty(
+export function printBoundEmptyNode(
   path: FastPath<BoundEmptyNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

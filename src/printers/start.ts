@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printStartAbsent(
+export function printStartAbsentNode(
   path: FastPath<StartAbsentNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printStartAbsent(
   throw new Error("Node type 'Start.Absent' is not implemented yet");
 }
 
-export function printStartPresent(
+export function printStartPresentNode(
   path: FastPath<StartPresentNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

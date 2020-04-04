@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printStringLiteralInterpolated(
+export function printStringLiteralInterpolatedNode(
   path: FastPath<StringLiteralInterpolatedNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printStringLiteralInterpolated(
   throw new Error("Node type 'StringLiteral.Interpolated' is not implemented yet");
 }
 
-export function printStringLiteralNonInterpolated(
+export function printStringLiteralNonInterpolatedNode(
   path: FastPath<StringLiteralNonInterpolatedNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printStringLiteralNonInterpolated(
   throw new Error("Node type 'StringLiteral.NonInterpolated' is not implemented yet");
 }
 
-export function printStringLiteralTemplate(
+export function printStringLiteralTemplateNode(
   path: FastPath<StringLiteralTemplateNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

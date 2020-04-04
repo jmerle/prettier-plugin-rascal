@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printDataTargetEmpty(
+export function printDataTargetEmptyNode(
   path: FastPath<DataTargetEmptyNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printDataTargetEmpty(
   throw new Error("Node type 'DataTarget.Empty' is not implemented yet");
 }
 
-export function printDataTargetLabeled(
+export function printDataTargetLabeledNode(
   path: FastPath<DataTargetLabeledNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

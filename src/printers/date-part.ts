@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printDatePartLexical(
+export function printDatePartLexicalNode(
   path: FastPath<DatePartLexicalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

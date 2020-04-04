@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printProdAll(
+export function printProdAllNode(
   path: FastPath<ProdAllNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printProdAll(
   throw new Error("Node type 'Prod.All' is not implemented yet");
 }
 
-export function printProdAssociativityGroup(
+export function printProdAssociativityGroupNode(
   path: FastPath<ProdAssociativityGroupNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printProdAssociativityGroup(
   throw new Error("Node type 'Prod.AssociativityGroup' is not implemented yet");
 }
 
-export function printProdFirst(
+export function printProdFirstNode(
   path: FastPath<ProdFirstNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printProdFirst(
   throw new Error("Node type 'Prod.First' is not implemented yet");
 }
 
-export function printProdLabeled(
+export function printProdLabeledNode(
   path: FastPath<ProdLabeledNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printProdLabeled(
   throw new Error("Node type 'Prod.Labeled' is not implemented yet");
 }
 
-export function printProdReference(
+export function printProdReferenceNode(
   path: FastPath<ProdReferenceNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -52,7 +52,7 @@ export function printProdReference(
   throw new Error("Node type 'Prod.Reference' is not implemented yet");
 }
 
-export function printProdUnlabeled(
+export function printProdUnlabeledNode(
   path: FastPath<ProdUnlabeledNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

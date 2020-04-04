@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printSignatureNoThrows(
+export function printSignatureNoThrowsNode(
   path: FastPath<SignatureNoThrowsNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printSignatureNoThrows(
   throw new Error("Node type 'Signature.NoThrows' is not implemented yet");
 }
 
-export function printSignatureWithThrows(
+export function printSignatureWithThrowsNode(
   path: FastPath<SignatureWithThrowsNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

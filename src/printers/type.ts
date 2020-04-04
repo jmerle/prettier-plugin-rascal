@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printTypeBasic(
+export function printTypeBasicNode(
   path: FastPath<TypeBasicNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printTypeBasic(
   throw new Error("Node type 'Type.Basic' is not implemented yet");
 }
 
-export function printTypeBracket(
+export function printTypeBracketNode(
   path: FastPath<TypeBracketNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printTypeBracket(
   throw new Error("Node type 'Type.Bracket' is not implemented yet");
 }
 
-export function printTypeFunction(
+export function printTypeFunctionNode(
   path: FastPath<TypeFunctionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printTypeFunction(
   throw new Error("Node type 'Type.Function' is not implemented yet");
 }
 
-export function printTypeSelector(
+export function printTypeSelectorNode(
   path: FastPath<TypeSelectorNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printTypeSelector(
   throw new Error("Node type 'Type.Selector' is not implemented yet");
 }
 
-export function printTypeStructured(
+export function printTypeStructuredNode(
   path: FastPath<TypeStructuredNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -52,7 +52,7 @@ export function printTypeStructured(
   throw new Error("Node type 'Type.Structured' is not implemented yet");
 }
 
-export function printTypeSymbol(
+export function printTypeSymbolNode(
   path: FastPath<TypeSymbolNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -62,7 +62,7 @@ export function printTypeSymbol(
   throw new Error("Node type 'Type.Symbol' is not implemented yet");
 }
 
-export function printTypeUser(
+export function printTypeUserNode(
   path: FastPath<TypeUserNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -72,7 +72,7 @@ export function printTypeUser(
   throw new Error("Node type 'Type.User' is not implemented yet");
 }
 
-export function printTypeVariable(
+export function printTypeVariableNode(
   path: FastPath<TypeVariableNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printModuleActualsDefault(
+export function printModuleActualsDefaultNode(
   path: FastPath<ModuleActualsDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

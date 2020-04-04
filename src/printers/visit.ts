@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printVisitDefaultStrategy(
+export function printVisitDefaultStrategyNode(
   path: FastPath<VisitDefaultStrategyNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printVisitDefaultStrategy(
   throw new Error("Node type 'Visit.DefaultStrategy' is not implemented yet");
 }
 
-export function printVisitGivenStrategy(
+export function printVisitGivenStrategyNode(
   path: FastPath<VisitGivenStrategyNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

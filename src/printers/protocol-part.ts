@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printProtocolPartInterpolated(
+export function printProtocolPartInterpolatedNode(
   path: FastPath<ProtocolPartInterpolatedNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printProtocolPartInterpolated(
   throw new Error("Node type 'ProtocolPart.Interpolated' is not implemented yet");
 }
 
-export function printProtocolPartNonInterpolated(
+export function printProtocolPartNonInterpolatedNode(
   path: FastPath<ProtocolPartNonInterpolatedNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

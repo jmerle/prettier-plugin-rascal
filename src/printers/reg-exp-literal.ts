@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printRegExpLiteralLexical(
+export function printRegExpLiteralLexicalNode(
   path: FastPath<RegExpLiteralLexicalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

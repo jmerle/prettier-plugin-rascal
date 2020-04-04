@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printStructuredTypeDefault(
+export function printStructuredTypeDefaultNode(
   path: FastPath<StructuredTypeDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printBasicTypeBag(
+export function printBasicTypeBagNode(
   path: FastPath<BasicTypeBagNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printBasicTypeBag(
   throw new Error("Node type 'BasicType.Bag' is not implemented yet");
 }
 
-export function printBasicTypeBool(
+export function printBasicTypeBoolNode(
   path: FastPath<BasicTypeBoolNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printBasicTypeBool(
   throw new Error("Node type 'BasicType.Bool' is not implemented yet");
 }
 
-export function printBasicTypeDateTime(
+export function printBasicTypeDateTimeNode(
   path: FastPath<BasicTypeDateTimeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printBasicTypeDateTime(
   throw new Error("Node type 'BasicType.DateTime' is not implemented yet");
 }
 
-export function printBasicTypeInt(
+export function printBasicTypeIntNode(
   path: FastPath<BasicTypeIntNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printBasicTypeInt(
   throw new Error("Node type 'BasicType.Int' is not implemented yet");
 }
 
-export function printBasicTypeList(
+export function printBasicTypeListNode(
   path: FastPath<BasicTypeListNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -52,7 +52,7 @@ export function printBasicTypeList(
   throw new Error("Node type 'BasicType.List' is not implemented yet");
 }
 
-export function printBasicTypeListRelation(
+export function printBasicTypeListRelationNode(
   path: FastPath<BasicTypeListRelationNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -62,7 +62,7 @@ export function printBasicTypeListRelation(
   throw new Error("Node type 'BasicType.ListRelation' is not implemented yet");
 }
 
-export function printBasicTypeLoc(
+export function printBasicTypeLocNode(
   path: FastPath<BasicTypeLocNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -72,7 +72,7 @@ export function printBasicTypeLoc(
   throw new Error("Node type 'BasicType.Loc' is not implemented yet");
 }
 
-export function printBasicTypeMap(
+export function printBasicTypeMapNode(
   path: FastPath<BasicTypeMapNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -82,7 +82,7 @@ export function printBasicTypeMap(
   throw new Error("Node type 'BasicType.Map' is not implemented yet");
 }
 
-export function printBasicTypeNode(
+export function printBasicTypeNodeNode(
   path: FastPath<BasicTypeNodeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -92,7 +92,7 @@ export function printBasicTypeNode(
   throw new Error("Node type 'BasicType.Node' is not implemented yet");
 }
 
-export function printBasicTypeNum(
+export function printBasicTypeNumNode(
   path: FastPath<BasicTypeNumNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -102,7 +102,7 @@ export function printBasicTypeNum(
   throw new Error("Node type 'BasicType.Num' is not implemented yet");
 }
 
-export function printBasicTypeRational(
+export function printBasicTypeRationalNode(
   path: FastPath<BasicTypeRationalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -112,7 +112,7 @@ export function printBasicTypeRational(
   throw new Error("Node type 'BasicType.Rational' is not implemented yet");
 }
 
-export function printBasicTypeReal(
+export function printBasicTypeRealNode(
   path: FastPath<BasicTypeRealNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -122,7 +122,7 @@ export function printBasicTypeReal(
   throw new Error("Node type 'BasicType.Real' is not implemented yet");
 }
 
-export function printBasicTypeRelation(
+export function printBasicTypeRelationNode(
   path: FastPath<BasicTypeRelationNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -132,7 +132,7 @@ export function printBasicTypeRelation(
   throw new Error("Node type 'BasicType.Relation' is not implemented yet");
 }
 
-export function printBasicTypeSet(
+export function printBasicTypeSetNode(
   path: FastPath<BasicTypeSetNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -142,7 +142,7 @@ export function printBasicTypeSet(
   throw new Error("Node type 'BasicType.Set' is not implemented yet");
 }
 
-export function printBasicTypeString(
+export function printBasicTypeStringNode(
   path: FastPath<BasicTypeStringNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -152,7 +152,7 @@ export function printBasicTypeString(
   throw new Error("Node type 'BasicType.String' is not implemented yet");
 }
 
-export function printBasicTypeTuple(
+export function printBasicTypeTupleNode(
   path: FastPath<BasicTypeTupleNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -162,7 +162,7 @@ export function printBasicTypeTuple(
   throw new Error("Node type 'BasicType.Tuple' is not implemented yet");
 }
 
-export function printBasicTypeType(
+export function printBasicTypeTypeNode(
   path: FastPath<BasicTypeTypeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -172,7 +172,7 @@ export function printBasicTypeType(
   throw new Error("Node type 'BasicType.Type' is not implemented yet");
 }
 
-export function printBasicTypeValue(
+export function printBasicTypeValueNode(
   path: FastPath<BasicTypeValueNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -182,7 +182,7 @@ export function printBasicTypeValue(
   throw new Error("Node type 'BasicType.Value' is not implemented yet");
 }
 
-export function printBasicTypeVoid(
+export function printBasicTypeVoidNode(
   path: FastPath<BasicTypeVoidNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

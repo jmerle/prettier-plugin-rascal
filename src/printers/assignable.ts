@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printAssignableAnnotation(
+export function printAssignableAnnotationNode(
   path: FastPath<AssignableAnnotationNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printAssignableAnnotation(
   throw new Error("Node type 'Assignable.Annotation' is not implemented yet");
 }
 
-export function printAssignableBracket(
+export function printAssignableBracketNode(
   path: FastPath<AssignableBracketNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printAssignableBracket(
   throw new Error("Node type 'Assignable.Bracket' is not implemented yet");
 }
 
-export function printAssignableConstructor(
+export function printAssignableConstructorNode(
   path: FastPath<AssignableConstructorNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printAssignableConstructor(
   throw new Error("Node type 'Assignable.Constructor' is not implemented yet");
 }
 
-export function printAssignableFieldAccess(
+export function printAssignableFieldAccessNode(
   path: FastPath<AssignableFieldAccessNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printAssignableFieldAccess(
   throw new Error("Node type 'Assignable.FieldAccess' is not implemented yet");
 }
 
-export function printAssignableIfDefinedOrDefault(
+export function printAssignableIfDefinedOrDefaultNode(
   path: FastPath<AssignableIfDefinedOrDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -52,7 +52,7 @@ export function printAssignableIfDefinedOrDefault(
   throw new Error("Node type 'Assignable.IfDefinedOrDefault' is not implemented yet");
 }
 
-export function printAssignableSlice(
+export function printAssignableSliceNode(
   path: FastPath<AssignableSliceNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -62,7 +62,7 @@ export function printAssignableSlice(
   throw new Error("Node type 'Assignable.Slice' is not implemented yet");
 }
 
-export function printAssignableSliceStep(
+export function printAssignableSliceStepNode(
   path: FastPath<AssignableSliceStepNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -72,7 +72,7 @@ export function printAssignableSliceStep(
   throw new Error("Node type 'Assignable.SliceStep' is not implemented yet");
 }
 
-export function printAssignableSubscript(
+export function printAssignableSubscriptNode(
   path: FastPath<AssignableSubscriptNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -82,7 +82,7 @@ export function printAssignableSubscript(
   throw new Error("Node type 'Assignable.Subscript' is not implemented yet");
 }
 
-export function printAssignableTuple(
+export function printAssignableTupleNode(
   path: FastPath<AssignableTupleNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -92,7 +92,7 @@ export function printAssignableTuple(
   throw new Error("Node type 'Assignable.Tuple' is not implemented yet");
 }
 
-export function printAssignableVariable(
+export function printAssignableVariableNode(
   path: FastPath<AssignableVariableNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

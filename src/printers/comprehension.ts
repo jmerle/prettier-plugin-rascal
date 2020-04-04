@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printComprehensionList(
+export function printComprehensionListNode(
   path: FastPath<ComprehensionListNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printComprehensionList(
   throw new Error("Node type 'Comprehension.List' is not implemented yet");
 }
 
-export function printComprehensionMap(
+export function printComprehensionMapNode(
   path: FastPath<ComprehensionMapNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printComprehensionMap(
   throw new Error("Node type 'Comprehension.Map' is not implemented yet");
 }
 
-export function printComprehensionSet(
+export function printComprehensionSetNode(
   path: FastPath<ComprehensionSetNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

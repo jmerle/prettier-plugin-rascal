@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printDateTimeLiteralDateAndTimeLiteral(
+export function printDateTimeLiteralDateAndTimeLiteralNode(
   path: FastPath<DateTimeLiteralDateAndTimeLiteralNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printDateTimeLiteralDateAndTimeLiteral(
   throw new Error("Node type 'DateTimeLiteral.DateAndTimeLiteral' is not implemented yet");
 }
 
-export function printDateTimeLiteralDateLiteral(
+export function printDateTimeLiteralDateLiteralNode(
   path: FastPath<DateTimeLiteralDateLiteralNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printDateTimeLiteralDateLiteral(
   throw new Error("Node type 'DateTimeLiteral.DateLiteral' is not implemented yet");
 }
 
-export function printDateTimeLiteralTimeLiteral(
+export function printDateTimeLiteralTimeLiteralNode(
   path: FastPath<DateTimeLiteralTimeLiteralNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

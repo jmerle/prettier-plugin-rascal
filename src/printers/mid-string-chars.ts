@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printMidStringCharsLexical(
+export function printMidStringCharsLexicalNode(
   path: FastPath<MidStringCharsLexicalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printLabelDefault(
+export function printLabelDefaultNode(
   path: FastPath<LabelDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printLabelDefault(
   throw new Error("Node type 'Label.Default' is not implemented yet");
 }
 
-export function printLabelEmpty(
+export function printLabelEmptyNode(
   path: FastPath<LabelEmptyNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

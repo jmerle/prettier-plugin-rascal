@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printUserTypeName(
+export function printUserTypeNameNode(
   path: FastPath<UserTypeNameNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printUserTypeName(
   throw new Error("Node type 'UserType.Name' is not implemented yet");
 }
 
-export function printUserTypeParametric(
+export function printUserTypeParametricNode(
   path: FastPath<UserTypeParametricNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

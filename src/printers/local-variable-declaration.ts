@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printLocalVariableDeclarationDefault(
+export function printLocalVariableDeclarationDefaultNode(
   path: FastPath<LocalVariableDeclarationDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printLocalVariableDeclarationDefault(
   throw new Error("Node type 'LocalVariableDeclaration.Default' is not implemented yet");
 }
 
-export function printLocalVariableDeclarationDynamic(
+export function printLocalVariableDeclarationDynamicNode(
   path: FastPath<LocalVariableDeclarationDynamicNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

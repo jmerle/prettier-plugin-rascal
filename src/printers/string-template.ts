@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printStringTemplateDoWhile(
+export function printStringTemplateDoWhileNode(
   path: FastPath<StringTemplateDoWhileNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printStringTemplateDoWhile(
   throw new Error("Node type 'StringTemplate.DoWhile' is not implemented yet");
 }
 
-export function printStringTemplateFor(
+export function printStringTemplateForNode(
   path: FastPath<StringTemplateForNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printStringTemplateFor(
   throw new Error("Node type 'StringTemplate.For' is not implemented yet");
 }
 
-export function printStringTemplateIfThen(
+export function printStringTemplateIfThenNode(
   path: FastPath<StringTemplateIfThenNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printStringTemplateIfThen(
   throw new Error("Node type 'StringTemplate.IfThen' is not implemented yet");
 }
 
-export function printStringTemplateIfThenElse(
+export function printStringTemplateIfThenElseNode(
   path: FastPath<StringTemplateIfThenElseNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printStringTemplateIfThenElse(
   throw new Error("Node type 'StringTemplate.IfThenElse' is not implemented yet");
 }
 
-export function printStringTemplateWhile(
+export function printStringTemplateWhileNode(
   path: FastPath<StringTemplateWhileNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

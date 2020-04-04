@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printKeywordArgument_ExpressionDefault(
+export function printKeywordArgument_ExpressionDefaultNode(
   path: FastPath<KeywordArgument_ExpressionDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

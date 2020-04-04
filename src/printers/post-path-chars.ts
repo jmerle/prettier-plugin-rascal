@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printPostPathCharsLexical(
+export function printPostPathCharsLexicalNode(
   path: FastPath<PostPathCharsLexicalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

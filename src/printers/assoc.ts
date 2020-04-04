@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printAssocAssociative(
+export function printAssocAssociativeNode(
   path: FastPath<AssocAssociativeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printAssocAssociative(
   throw new Error("Node type 'Assoc.Associative' is not implemented yet");
 }
 
-export function printAssocLeft(
+export function printAssocLeftNode(
   path: FastPath<AssocLeftNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printAssocLeft(
   throw new Error("Node type 'Assoc.Left' is not implemented yet");
 }
 
-export function printAssocNonAssociative(
+export function printAssocNonAssociativeNode(
   path: FastPath<AssocNonAssociativeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printAssocNonAssociative(
   throw new Error("Node type 'Assoc.NonAssociative' is not implemented yet");
 }
 
-export function printAssocRight(
+export function printAssocRightNode(
   path: FastPath<AssocRightNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

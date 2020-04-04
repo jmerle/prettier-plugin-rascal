@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printCaseInsensitiveStringConstantLexical(
+export function printCaseInsensitiveStringConstantLexicalNode(
   path: FastPath<CaseInsensitiveStringConstantLexicalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

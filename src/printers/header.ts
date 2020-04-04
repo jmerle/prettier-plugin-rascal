@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printHeaderDefault(
+export function printHeaderDefaultNode(
   path: FastPath<HeaderDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printHeaderDefault(
   throw new Error("Node type 'Header.Default' is not implemented yet");
 }
 
-export function printHeaderParameters(
+export function printHeaderParametersNode(
   path: FastPath<HeaderParametersNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

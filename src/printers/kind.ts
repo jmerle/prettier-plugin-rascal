@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printKindAlias(
+export function printKindAliasNode(
   path: FastPath<KindAliasNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printKindAlias(
   throw new Error("Node type 'Kind.Alias' is not implemented yet");
 }
 
-export function printKindAll(
+export function printKindAllNode(
   path: FastPath<KindAllNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printKindAll(
   throw new Error("Node type 'Kind.All' is not implemented yet");
 }
 
-export function printKindAnno(
+export function printKindAnnoNode(
   path: FastPath<KindAnnoNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printKindAnno(
   throw new Error("Node type 'Kind.Anno' is not implemented yet");
 }
 
-export function printKindData(
+export function printKindDataNode(
   path: FastPath<KindDataNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printKindData(
   throw new Error("Node type 'Kind.Data' is not implemented yet");
 }
 
-export function printKindFunction(
+export function printKindFunctionNode(
   path: FastPath<KindFunctionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -52,7 +52,7 @@ export function printKindFunction(
   throw new Error("Node type 'Kind.Function' is not implemented yet");
 }
 
-export function printKindModule(
+export function printKindModuleNode(
   path: FastPath<KindModuleNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -62,7 +62,7 @@ export function printKindModule(
   throw new Error("Node type 'Kind.Module' is not implemented yet");
 }
 
-export function printKindTag(
+export function printKindTagNode(
   path: FastPath<KindTagNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -72,7 +72,7 @@ export function printKindTag(
   throw new Error("Node type 'Kind.Tag' is not implemented yet");
 }
 
-export function printKindVariable(
+export function printKindVariableNode(
   path: FastPath<KindVariableNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -82,7 +82,7 @@ export function printKindVariable(
   throw new Error("Node type 'Kind.Variable' is not implemented yet");
 }
 
-export function printKindView(
+export function printKindViewNode(
   path: FastPath<KindViewNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

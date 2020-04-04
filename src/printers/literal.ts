@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printLiteralBoolean(
+export function printLiteralBooleanNode(
   path: FastPath<LiteralBooleanNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printLiteralBoolean(
   throw new Error("Node type 'Literal.Boolean' is not implemented yet");
 }
 
-export function printLiteralDateTime(
+export function printLiteralDateTimeNode(
   path: FastPath<LiteralDateTimeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printLiteralDateTime(
   throw new Error("Node type 'Literal.DateTime' is not implemented yet");
 }
 
-export function printLiteralInteger(
+export function printLiteralIntegerNode(
   path: FastPath<LiteralIntegerNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printLiteralInteger(
   throw new Error("Node type 'Literal.Integer' is not implemented yet");
 }
 
-export function printLiteralLocation(
+export function printLiteralLocationNode(
   path: FastPath<LiteralLocationNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printLiteralLocation(
   throw new Error("Node type 'Literal.Location' is not implemented yet");
 }
 
-export function printLiteralRational(
+export function printLiteralRationalNode(
   path: FastPath<LiteralRationalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -52,7 +52,7 @@ export function printLiteralRational(
   throw new Error("Node type 'Literal.Rational' is not implemented yet");
 }
 
-export function printLiteralReal(
+export function printLiteralRealNode(
   path: FastPath<LiteralRealNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -62,7 +62,7 @@ export function printLiteralReal(
   throw new Error("Node type 'Literal.Real' is not implemented yet");
 }
 
-export function printLiteralRegExp(
+export function printLiteralRegExpNode(
   path: FastPath<LiteralRegExpNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -72,7 +72,7 @@ export function printLiteralRegExp(
   throw new Error("Node type 'Literal.RegExp' is not implemented yet");
 }
 
-export function printLiteralString(
+export function printLiteralStringNode(
   path: FastPath<LiteralStringNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

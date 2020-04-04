@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printExpressionAddition(
+export function printExpressionAdditionNode(
   path: FastPath<ExpressionAdditionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printExpressionAddition(
   throw new Error("Node type 'Expression.Addition' is not implemented yet");
 }
 
-export function printExpressionAll(
+export function printExpressionAllNode(
   path: FastPath<ExpressionAllNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printExpressionAll(
   throw new Error("Node type 'Expression.All' is not implemented yet");
 }
 
-export function printExpressionAnd(
+export function printExpressionAndNode(
   path: FastPath<ExpressionAndNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printExpressionAnd(
   throw new Error("Node type 'Expression.And' is not implemented yet");
 }
 
-export function printExpressionAnti(
+export function printExpressionAntiNode(
   path: FastPath<ExpressionAntiNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printExpressionAnti(
   throw new Error("Node type 'Expression.Anti' is not implemented yet");
 }
 
-export function printExpressionAny(
+export function printExpressionAnyNode(
   path: FastPath<ExpressionAnyNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -52,7 +52,7 @@ export function printExpressionAny(
   throw new Error("Node type 'Expression.Any' is not implemented yet");
 }
 
-export function printExpressionAppendAfter(
+export function printExpressionAppendAfterNode(
   path: FastPath<ExpressionAppendAfterNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -62,7 +62,7 @@ export function printExpressionAppendAfter(
   throw new Error("Node type 'Expression.AppendAfter' is not implemented yet");
 }
 
-export function printExpressionAsType(
+export function printExpressionAsTypeNode(
   path: FastPath<ExpressionAsTypeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -72,7 +72,7 @@ export function printExpressionAsType(
   throw new Error("Node type 'Expression.AsType' is not implemented yet");
 }
 
-export function printExpressionBracket(
+export function printExpressionBracketNode(
   path: FastPath<ExpressionBracketNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -82,7 +82,7 @@ export function printExpressionBracket(
   throw new Error("Node type 'Expression.Bracket' is not implemented yet");
 }
 
-export function printExpressionCallOrTree(
+export function printExpressionCallOrTreeNode(
   path: FastPath<ExpressionCallOrTreeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -92,7 +92,7 @@ export function printExpressionCallOrTree(
   throw new Error("Node type 'Expression.CallOrTree' is not implemented yet");
 }
 
-export function printExpressionClosure(
+export function printExpressionClosureNode(
   path: FastPath<ExpressionClosureNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -102,7 +102,7 @@ export function printExpressionClosure(
   throw new Error("Node type 'Expression.Closure' is not implemented yet");
 }
 
-export function printExpressionComposition(
+export function printExpressionCompositionNode(
   path: FastPath<ExpressionCompositionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -112,7 +112,7 @@ export function printExpressionComposition(
   throw new Error("Node type 'Expression.Composition' is not implemented yet");
 }
 
-export function printExpressionComprehension(
+export function printExpressionComprehensionNode(
   path: FastPath<ExpressionComprehensionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -122,7 +122,7 @@ export function printExpressionComprehension(
   throw new Error("Node type 'Expression.Comprehension' is not implemented yet");
 }
 
-export function printExpressionConcrete(
+export function printExpressionConcreteNode(
   path: FastPath<ExpressionConcreteNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -132,7 +132,7 @@ export function printExpressionConcrete(
   throw new Error("Node type 'Expression.Concrete' is not implemented yet");
 }
 
-export function printExpressionDescendant(
+export function printExpressionDescendantNode(
   path: FastPath<ExpressionDescendantNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -142,7 +142,7 @@ export function printExpressionDescendant(
   throw new Error("Node type 'Expression.Descendant' is not implemented yet");
 }
 
-export function printExpressionDivision(
+export function printExpressionDivisionNode(
   path: FastPath<ExpressionDivisionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -152,7 +152,7 @@ export function printExpressionDivision(
   throw new Error("Node type 'Expression.Division' is not implemented yet");
 }
 
-export function printExpressionEnumerator(
+export function printExpressionEnumeratorNode(
   path: FastPath<ExpressionEnumeratorNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -162,7 +162,7 @@ export function printExpressionEnumerator(
   throw new Error("Node type 'Expression.Enumerator' is not implemented yet");
 }
 
-export function printExpressionEquals(
+export function printExpressionEqualsNode(
   path: FastPath<ExpressionEqualsNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -172,7 +172,7 @@ export function printExpressionEquals(
   throw new Error("Node type 'Expression.Equals' is not implemented yet");
 }
 
-export function printExpressionEquivalence(
+export function printExpressionEquivalenceNode(
   path: FastPath<ExpressionEquivalenceNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -182,7 +182,7 @@ export function printExpressionEquivalence(
   throw new Error("Node type 'Expression.Equivalence' is not implemented yet");
 }
 
-export function printExpressionFieldAccess(
+export function printExpressionFieldAccessNode(
   path: FastPath<ExpressionFieldAccessNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -192,7 +192,7 @@ export function printExpressionFieldAccess(
   throw new Error("Node type 'Expression.FieldAccess' is not implemented yet");
 }
 
-export function printExpressionFieldProject(
+export function printExpressionFieldProjectNode(
   path: FastPath<ExpressionFieldProjectNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -202,7 +202,7 @@ export function printExpressionFieldProject(
   throw new Error("Node type 'Expression.FieldProject' is not implemented yet");
 }
 
-export function printExpressionFieldUpdate(
+export function printExpressionFieldUpdateNode(
   path: FastPath<ExpressionFieldUpdateNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -212,7 +212,7 @@ export function printExpressionFieldUpdate(
   throw new Error("Node type 'Expression.FieldUpdate' is not implemented yet");
 }
 
-export function printExpressionGetAnnotation(
+export function printExpressionGetAnnotationNode(
   path: FastPath<ExpressionGetAnnotationNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -222,7 +222,7 @@ export function printExpressionGetAnnotation(
   throw new Error("Node type 'Expression.GetAnnotation' is not implemented yet");
 }
 
-export function printExpressionGreaterThan(
+export function printExpressionGreaterThanNode(
   path: FastPath<ExpressionGreaterThanNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -232,7 +232,7 @@ export function printExpressionGreaterThan(
   throw new Error("Node type 'Expression.GreaterThan' is not implemented yet");
 }
 
-export function printExpressionGreaterThanOrEq(
+export function printExpressionGreaterThanOrEqNode(
   path: FastPath<ExpressionGreaterThanOrEqNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -242,7 +242,7 @@ export function printExpressionGreaterThanOrEq(
   throw new Error("Node type 'Expression.GreaterThanOrEq' is not implemented yet");
 }
 
-export function printExpressionHas(
+export function printExpressionHasNode(
   path: FastPath<ExpressionHasNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -252,7 +252,7 @@ export function printExpressionHas(
   throw new Error("Node type 'Expression.Has' is not implemented yet");
 }
 
-export function printExpressionIfDefinedOtherwise(
+export function printExpressionIfDefinedOtherwiseNode(
   path: FastPath<ExpressionIfDefinedOtherwiseNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -262,7 +262,7 @@ export function printExpressionIfDefinedOtherwise(
   throw new Error("Node type 'Expression.IfDefinedOtherwise' is not implemented yet");
 }
 
-export function printExpressionIfThenElse(
+export function printExpressionIfThenElseNode(
   path: FastPath<ExpressionIfThenElseNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -272,7 +272,7 @@ export function printExpressionIfThenElse(
   throw new Error("Node type 'Expression.IfThenElse' is not implemented yet");
 }
 
-export function printExpressionImplication(
+export function printExpressionImplicationNode(
   path: FastPath<ExpressionImplicationNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -282,7 +282,7 @@ export function printExpressionImplication(
   throw new Error("Node type 'Expression.Implication' is not implemented yet");
 }
 
-export function printExpressionIn(
+export function printExpressionInNode(
   path: FastPath<ExpressionInNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -292,7 +292,7 @@ export function printExpressionIn(
   throw new Error("Node type 'Expression.In' is not implemented yet");
 }
 
-export function printExpressionInsertBefore(
+export function printExpressionInsertBeforeNode(
   path: FastPath<ExpressionInsertBeforeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -302,7 +302,7 @@ export function printExpressionInsertBefore(
   throw new Error("Node type 'Expression.InsertBefore' is not implemented yet");
 }
 
-export function printExpressionIntersection(
+export function printExpressionIntersectionNode(
   path: FastPath<ExpressionIntersectionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -312,7 +312,7 @@ export function printExpressionIntersection(
   throw new Error("Node type 'Expression.Intersection' is not implemented yet");
 }
 
-export function printExpressionIs(
+export function printExpressionIsNode(
   path: FastPath<ExpressionIsNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -322,7 +322,7 @@ export function printExpressionIs(
   throw new Error("Node type 'Expression.Is' is not implemented yet");
 }
 
-export function printExpressionIsDefined(
+export function printExpressionIsDefinedNode(
   path: FastPath<ExpressionIsDefinedNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -332,7 +332,7 @@ export function printExpressionIsDefined(
   throw new Error("Node type 'Expression.IsDefined' is not implemented yet");
 }
 
-export function printExpressionIt(
+export function printExpressionItNode(
   path: FastPath<ExpressionItNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -342,7 +342,7 @@ export function printExpressionIt(
   throw new Error("Node type 'Expression.It' is not implemented yet");
 }
 
-export function printExpressionJoin(
+export function printExpressionJoinNode(
   path: FastPath<ExpressionJoinNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -352,7 +352,7 @@ export function printExpressionJoin(
   throw new Error("Node type 'Expression.Join' is not implemented yet");
 }
 
-export function printExpressionLessThan(
+export function printExpressionLessThanNode(
   path: FastPath<ExpressionLessThanNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -362,7 +362,7 @@ export function printExpressionLessThan(
   throw new Error("Node type 'Expression.LessThan' is not implemented yet");
 }
 
-export function printExpressionLessThanOrEq(
+export function printExpressionLessThanOrEqNode(
   path: FastPath<ExpressionLessThanOrEqNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -372,7 +372,7 @@ export function printExpressionLessThanOrEq(
   throw new Error("Node type 'Expression.LessThanOrEq' is not implemented yet");
 }
 
-export function printExpressionList(
+export function printExpressionListNode(
   path: FastPath<ExpressionListNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -382,7 +382,7 @@ export function printExpressionList(
   throw new Error("Node type 'Expression.List' is not implemented yet");
 }
 
-export function printExpressionLiteral(
+export function printExpressionLiteralNode(
   path: FastPath<ExpressionLiteralNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -392,7 +392,7 @@ export function printExpressionLiteral(
   throw new Error("Node type 'Expression.Literal' is not implemented yet");
 }
 
-export function printExpressionMap(
+export function printExpressionMapNode(
   path: FastPath<ExpressionMapNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -402,7 +402,7 @@ export function printExpressionMap(
   throw new Error("Node type 'Expression.Map' is not implemented yet");
 }
 
-export function printExpressionMatch(
+export function printExpressionMatchNode(
   path: FastPath<ExpressionMatchNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -412,7 +412,7 @@ export function printExpressionMatch(
   throw new Error("Node type 'Expression.Match' is not implemented yet");
 }
 
-export function printExpressionModulo(
+export function printExpressionModuloNode(
   path: FastPath<ExpressionModuloNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -422,7 +422,7 @@ export function printExpressionModulo(
   throw new Error("Node type 'Expression.Modulo' is not implemented yet");
 }
 
-export function printExpressionMultiVariable(
+export function printExpressionMultiVariableNode(
   path: FastPath<ExpressionMultiVariableNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -432,7 +432,7 @@ export function printExpressionMultiVariable(
   throw new Error("Node type 'Expression.MultiVariable' is not implemented yet");
 }
 
-export function printExpressionNegation(
+export function printExpressionNegationNode(
   path: FastPath<ExpressionNegationNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -442,7 +442,7 @@ export function printExpressionNegation(
   throw new Error("Node type 'Expression.Negation' is not implemented yet");
 }
 
-export function printExpressionNegative(
+export function printExpressionNegativeNode(
   path: FastPath<ExpressionNegativeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -452,7 +452,7 @@ export function printExpressionNegative(
   throw new Error("Node type 'Expression.Negative' is not implemented yet");
 }
 
-export function printExpressionNoMatch(
+export function printExpressionNoMatchNode(
   path: FastPath<ExpressionNoMatchNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -462,7 +462,7 @@ export function printExpressionNoMatch(
   throw new Error("Node type 'Expression.NoMatch' is not implemented yet");
 }
 
-export function printExpressionNonEmptyBlock(
+export function printExpressionNonEmptyBlockNode(
   path: FastPath<ExpressionNonEmptyBlockNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -472,7 +472,7 @@ export function printExpressionNonEmptyBlock(
   throw new Error("Node type 'Expression.NonEmptyBlock' is not implemented yet");
 }
 
-export function printExpressionNonEquals(
+export function printExpressionNonEqualsNode(
   path: FastPath<ExpressionNonEqualsNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -482,7 +482,7 @@ export function printExpressionNonEquals(
   throw new Error("Node type 'Expression.NonEquals' is not implemented yet");
 }
 
-export function printExpressionNotIn(
+export function printExpressionNotInNode(
   path: FastPath<ExpressionNotInNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -492,7 +492,7 @@ export function printExpressionNotIn(
   throw new Error("Node type 'Expression.NotIn' is not implemented yet");
 }
 
-export function printExpressionOr(
+export function printExpressionOrNode(
   path: FastPath<ExpressionOrNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -502,7 +502,7 @@ export function printExpressionOr(
   throw new Error("Node type 'Expression.Or' is not implemented yet");
 }
 
-export function printExpressionProduct(
+export function printExpressionProductNode(
   path: FastPath<ExpressionProductNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -512,7 +512,7 @@ export function printExpressionProduct(
   throw new Error("Node type 'Expression.Product' is not implemented yet");
 }
 
-export function printExpressionQualifiedName(
+export function printExpressionQualifiedNameNode(
   path: FastPath<ExpressionQualifiedNameNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -522,7 +522,7 @@ export function printExpressionQualifiedName(
   throw new Error("Node type 'Expression.QualifiedName' is not implemented yet");
 }
 
-export function printExpressionRange(
+export function printExpressionRangeNode(
   path: FastPath<ExpressionRangeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -532,7 +532,7 @@ export function printExpressionRange(
   throw new Error("Node type 'Expression.Range' is not implemented yet");
 }
 
-export function printExpressionReducer(
+export function printExpressionReducerNode(
   path: FastPath<ExpressionReducerNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -542,7 +542,7 @@ export function printExpressionReducer(
   throw new Error("Node type 'Expression.Reducer' is not implemented yet");
 }
 
-export function printExpressionReifiedType(
+export function printExpressionReifiedTypeNode(
   path: FastPath<ExpressionReifiedTypeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -552,7 +552,7 @@ export function printExpressionReifiedType(
   throw new Error("Node type 'Expression.ReifiedType' is not implemented yet");
 }
 
-export function printExpressionReifyType(
+export function printExpressionReifyTypeNode(
   path: FastPath<ExpressionReifyTypeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -562,7 +562,7 @@ export function printExpressionReifyType(
   throw new Error("Node type 'Expression.ReifyType' is not implemented yet");
 }
 
-export function printExpressionRemainder(
+export function printExpressionRemainderNode(
   path: FastPath<ExpressionRemainderNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -572,7 +572,7 @@ export function printExpressionRemainder(
   throw new Error("Node type 'Expression.Remainder' is not implemented yet");
 }
 
-export function printExpressionSet(
+export function printExpressionSetNode(
   path: FastPath<ExpressionSetNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -582,7 +582,7 @@ export function printExpressionSet(
   throw new Error("Node type 'Expression.Set' is not implemented yet");
 }
 
-export function printExpressionSetAnnotation(
+export function printExpressionSetAnnotationNode(
   path: FastPath<ExpressionSetAnnotationNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -592,7 +592,7 @@ export function printExpressionSetAnnotation(
   throw new Error("Node type 'Expression.SetAnnotation' is not implemented yet");
 }
 
-export function printExpressionSlice(
+export function printExpressionSliceNode(
   path: FastPath<ExpressionSliceNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -602,7 +602,7 @@ export function printExpressionSlice(
   throw new Error("Node type 'Expression.Slice' is not implemented yet");
 }
 
-export function printExpressionSliceStep(
+export function printExpressionSliceStepNode(
   path: FastPath<ExpressionSliceStepNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -612,7 +612,7 @@ export function printExpressionSliceStep(
   throw new Error("Node type 'Expression.SliceStep' is not implemented yet");
 }
 
-export function printExpressionSplice(
+export function printExpressionSpliceNode(
   path: FastPath<ExpressionSpliceNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -622,7 +622,7 @@ export function printExpressionSplice(
   throw new Error("Node type 'Expression.Splice' is not implemented yet");
 }
 
-export function printExpressionSplicePlus(
+export function printExpressionSplicePlusNode(
   path: FastPath<ExpressionSplicePlusNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -632,7 +632,7 @@ export function printExpressionSplicePlus(
   throw new Error("Node type 'Expression.SplicePlus' is not implemented yet");
 }
 
-export function printExpressionStepRange(
+export function printExpressionStepRangeNode(
   path: FastPath<ExpressionStepRangeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -642,7 +642,7 @@ export function printExpressionStepRange(
   throw new Error("Node type 'Expression.StepRange' is not implemented yet");
 }
 
-export function printExpressionSubscript(
+export function printExpressionSubscriptNode(
   path: FastPath<ExpressionSubscriptNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -652,7 +652,7 @@ export function printExpressionSubscript(
   throw new Error("Node type 'Expression.Subscript' is not implemented yet");
 }
 
-export function printExpressionSubtraction(
+export function printExpressionSubtractionNode(
   path: FastPath<ExpressionSubtractionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -662,7 +662,7 @@ export function printExpressionSubtraction(
   throw new Error("Node type 'Expression.Subtraction' is not implemented yet");
 }
 
-export function printExpressionTransitiveClosure(
+export function printExpressionTransitiveClosureNode(
   path: FastPath<ExpressionTransitiveClosureNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -672,7 +672,7 @@ export function printExpressionTransitiveClosure(
   throw new Error("Node type 'Expression.TransitiveClosure' is not implemented yet");
 }
 
-export function printExpressionTransitiveReflexiveClosure(
+export function printExpressionTransitiveReflexiveClosureNode(
   path: FastPath<ExpressionTransitiveReflexiveClosureNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -682,7 +682,7 @@ export function printExpressionTransitiveReflexiveClosure(
   throw new Error("Node type 'Expression.TransitiveReflexiveClosure' is not implemented yet");
 }
 
-export function printExpressionTuple(
+export function printExpressionTupleNode(
   path: FastPath<ExpressionTupleNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -692,7 +692,7 @@ export function printExpressionTuple(
   throw new Error("Node type 'Expression.Tuple' is not implemented yet");
 }
 
-export function printExpressionTypedVariable(
+export function printExpressionTypedVariableNode(
   path: FastPath<ExpressionTypedVariableNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -702,7 +702,7 @@ export function printExpressionTypedVariable(
   throw new Error("Node type 'Expression.TypedVariable' is not implemented yet");
 }
 
-export function printExpressionTypedVariableBecomes(
+export function printExpressionTypedVariableBecomesNode(
   path: FastPath<ExpressionTypedVariableBecomesNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -712,7 +712,7 @@ export function printExpressionTypedVariableBecomes(
   throw new Error("Node type 'Expression.TypedVariableBecomes' is not implemented yet");
 }
 
-export function printExpressionVariableBecomes(
+export function printExpressionVariableBecomesNode(
   path: FastPath<ExpressionVariableBecomesNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -722,7 +722,7 @@ export function printExpressionVariableBecomes(
   throw new Error("Node type 'Expression.VariableBecomes' is not implemented yet");
 }
 
-export function printExpressionVisit(
+export function printExpressionVisitNode(
   path: FastPath<ExpressionVisitNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -732,7 +732,7 @@ export function printExpressionVisit(
   throw new Error("Node type 'Expression.Visit' is not implemented yet");
 }
 
-export function printExpressionVoidClosure(
+export function printExpressionVoidClosureNode(
   path: FastPath<ExpressionVoidClosureNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

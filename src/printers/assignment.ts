@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printAssignmentAddition(
+export function printAssignmentAdditionNode(
   path: FastPath<AssignmentAdditionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printAssignmentAddition(
   throw new Error("Node type 'Assignment.Addition' is not implemented yet");
 }
 
-export function printAssignmentAppend(
+export function printAssignmentAppendNode(
   path: FastPath<AssignmentAppendNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printAssignmentAppend(
   throw new Error("Node type 'Assignment.Append' is not implemented yet");
 }
 
-export function printAssignmentDefault(
+export function printAssignmentDefaultNode(
   path: FastPath<AssignmentDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printAssignmentDefault(
   throw new Error("Node type 'Assignment.Default' is not implemented yet");
 }
 
-export function printAssignmentDivision(
+export function printAssignmentDivisionNode(
   path: FastPath<AssignmentDivisionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printAssignmentDivision(
   throw new Error("Node type 'Assignment.Division' is not implemented yet");
 }
 
-export function printAssignmentIfDefined(
+export function printAssignmentIfDefinedNode(
   path: FastPath<AssignmentIfDefinedNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -52,7 +52,7 @@ export function printAssignmentIfDefined(
   throw new Error("Node type 'Assignment.IfDefined' is not implemented yet");
 }
 
-export function printAssignmentIntersection(
+export function printAssignmentIntersectionNode(
   path: FastPath<AssignmentIntersectionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -62,7 +62,7 @@ export function printAssignmentIntersection(
   throw new Error("Node type 'Assignment.Intersection' is not implemented yet");
 }
 
-export function printAssignmentProduct(
+export function printAssignmentProductNode(
   path: FastPath<AssignmentProductNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -72,7 +72,7 @@ export function printAssignmentProduct(
   throw new Error("Node type 'Assignment.Product' is not implemented yet");
 }
 
-export function printAssignmentSubtraction(
+export function printAssignmentSubtractionNode(
   path: FastPath<AssignmentSubtractionNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

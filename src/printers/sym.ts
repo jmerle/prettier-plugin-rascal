@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printSymAlternative(
+export function printSymAlternativeNode(
   path: FastPath<SymAlternativeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printSymAlternative(
   throw new Error("Node type 'Sym.Alternative' is not implemented yet");
 }
 
-export function printSymCaseInsensitiveLiteral(
+export function printSymCaseInsensitiveLiteralNode(
   path: FastPath<SymCaseInsensitiveLiteralNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printSymCaseInsensitiveLiteral(
   throw new Error("Node type 'Sym.CaseInsensitiveLiteral' is not implemented yet");
 }
 
-export function printSymCharacterClass(
+export function printSymCharacterClassNode(
   path: FastPath<SymCharacterClassNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printSymCharacterClass(
   throw new Error("Node type 'Sym.CharacterClass' is not implemented yet");
 }
 
-export function printSymColumn(
+export function printSymColumnNode(
   path: FastPath<SymColumnNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -42,7 +42,7 @@ export function printSymColumn(
   throw new Error("Node type 'Sym.Column' is not implemented yet");
 }
 
-export function printSymEmpty(
+export function printSymEmptyNode(
   path: FastPath<SymEmptyNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -52,7 +52,7 @@ export function printSymEmpty(
   throw new Error("Node type 'Sym.Empty' is not implemented yet");
 }
 
-export function printSymEndOfLine(
+export function printSymEndOfLineNode(
   path: FastPath<SymEndOfLineNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -62,7 +62,7 @@ export function printSymEndOfLine(
   throw new Error("Node type 'Sym.EndOfLine' is not implemented yet");
 }
 
-export function printSymExcept(
+export function printSymExceptNode(
   path: FastPath<SymExceptNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -72,7 +72,7 @@ export function printSymExcept(
   throw new Error("Node type 'Sym.Except' is not implemented yet");
 }
 
-export function printSymFollow(
+export function printSymFollowNode(
   path: FastPath<SymFollowNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -82,7 +82,7 @@ export function printSymFollow(
   throw new Error("Node type 'Sym.Follow' is not implemented yet");
 }
 
-export function printSymIter(
+export function printSymIterNode(
   path: FastPath<SymIterNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -92,7 +92,7 @@ export function printSymIter(
   throw new Error("Node type 'Sym.Iter' is not implemented yet");
 }
 
-export function printSymIterSep(
+export function printSymIterSepNode(
   path: FastPath<SymIterSepNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -102,7 +102,7 @@ export function printSymIterSep(
   throw new Error("Node type 'Sym.IterSep' is not implemented yet");
 }
 
-export function printSymIterStar(
+export function printSymIterStarNode(
   path: FastPath<SymIterStarNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -112,7 +112,7 @@ export function printSymIterStar(
   throw new Error("Node type 'Sym.IterStar' is not implemented yet");
 }
 
-export function printSymIterStarSep(
+export function printSymIterStarSepNode(
   path: FastPath<SymIterStarSepNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -122,7 +122,7 @@ export function printSymIterStarSep(
   throw new Error("Node type 'Sym.IterStarSep' is not implemented yet");
 }
 
-export function printSymLabeled(
+export function printSymLabeledNode(
   path: FastPath<SymLabeledNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -132,7 +132,7 @@ export function printSymLabeled(
   throw new Error("Node type 'Sym.Labeled' is not implemented yet");
 }
 
-export function printSymLiteral(
+export function printSymLiteralNode(
   path: FastPath<SymLiteralNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -142,7 +142,7 @@ export function printSymLiteral(
   throw new Error("Node type 'Sym.Literal' is not implemented yet");
 }
 
-export function printSymNonterminal(
+export function printSymNonterminalNode(
   path: FastPath<SymNonterminalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -152,7 +152,7 @@ export function printSymNonterminal(
   throw new Error("Node type 'Sym.Nonterminal' is not implemented yet");
 }
 
-export function printSymNotFollow(
+export function printSymNotFollowNode(
   path: FastPath<SymNotFollowNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -162,7 +162,7 @@ export function printSymNotFollow(
   throw new Error("Node type 'Sym.NotFollow' is not implemented yet");
 }
 
-export function printSymNotPrecede(
+export function printSymNotPrecedeNode(
   path: FastPath<SymNotPrecedeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -172,7 +172,7 @@ export function printSymNotPrecede(
   throw new Error("Node type 'Sym.NotPrecede' is not implemented yet");
 }
 
-export function printSymOptional(
+export function printSymOptionalNode(
   path: FastPath<SymOptionalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -182,7 +182,7 @@ export function printSymOptional(
   throw new Error("Node type 'Sym.Optional' is not implemented yet");
 }
 
-export function printSymParameter(
+export function printSymParameterNode(
   path: FastPath<SymParameterNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -192,7 +192,7 @@ export function printSymParameter(
   throw new Error("Node type 'Sym.Parameter' is not implemented yet");
 }
 
-export function printSymParametrized(
+export function printSymParametrizedNode(
   path: FastPath<SymParametrizedNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -202,7 +202,7 @@ export function printSymParametrized(
   throw new Error("Node type 'Sym.Parametrized' is not implemented yet");
 }
 
-export function printSymPrecede(
+export function printSymPrecedeNode(
   path: FastPath<SymPrecedeNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -212,7 +212,7 @@ export function printSymPrecede(
   throw new Error("Node type 'Sym.Precede' is not implemented yet");
 }
 
-export function printSymSequence(
+export function printSymSequenceNode(
   path: FastPath<SymSequenceNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -222,7 +222,7 @@ export function printSymSequence(
   throw new Error("Node type 'Sym.Sequence' is not implemented yet");
 }
 
-export function printSymStart(
+export function printSymStartNode(
   path: FastPath<SymStartNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -232,7 +232,7 @@ export function printSymStart(
   throw new Error("Node type 'Sym.Start' is not implemented yet");
 }
 
-export function printSymStartOfLine(
+export function printSymStartOfLineNode(
   path: FastPath<SymStartOfLineNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -242,7 +242,7 @@ export function printSymStartOfLine(
   throw new Error("Node type 'Sym.StartOfLine' is not implemented yet");
 }
 
-export function printSymUnequal(
+export function printSymUnequalNode(
   path: FastPath<SymUnequalNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

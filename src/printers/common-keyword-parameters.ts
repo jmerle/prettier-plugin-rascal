@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printCommonKeywordParametersAbsent(
+export function printCommonKeywordParametersAbsentNode(
   path: FastPath<CommonKeywordParametersAbsentNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printCommonKeywordParametersAbsent(
   throw new Error("Node type 'CommonKeywordParameters.Absent' is not implemented yet");
 }
 
-export function printCommonKeywordParametersPresent(
+export function printCommonKeywordParametersPresentNode(
   path: FastPath<CommonKeywordParametersPresentNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

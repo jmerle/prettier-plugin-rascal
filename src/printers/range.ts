@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printRangeCharacter(
+export function printRangeCharacterNode(
   path: FastPath<RangeCharacterNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printRangeCharacter(
   throw new Error("Node type 'Range.Character' is not implemented yet");
 }
 
-export function printRangeFromTo(
+export function printRangeFromToNode(
   path: FastPath<RangeFromToNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

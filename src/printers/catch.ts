@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printCatchBinding(
+export function printCatchBindingNode(
   path: FastPath<CatchBindingNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printCatchBinding(
   throw new Error("Node type 'Catch.Binding' is not implemented yet");
 }
 
-export function printCatchDefault(
+export function printCatchDefaultNode(
   path: FastPath<CatchDefaultNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,

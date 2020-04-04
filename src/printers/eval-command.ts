@@ -2,7 +2,7 @@ import { doc, Doc, FastPath, ParserOptions } from 'prettier';
 
 const { concat, join, group, indent, line, softline, hardline } = doc.builders;
 
-export function printEvalCommandDeclaration(
+export function printEvalCommandDeclarationNode(
   path: FastPath<EvalCommandDeclarationNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -12,7 +12,7 @@ export function printEvalCommandDeclaration(
   throw new Error("Node type 'EvalCommand.Declaration' is not implemented yet");
 }
 
-export function printEvalCommandImport(
+export function printEvalCommandImportNode(
   path: FastPath<EvalCommandImportNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -22,7 +22,7 @@ export function printEvalCommandImport(
   throw new Error("Node type 'EvalCommand.Import' is not implemented yet");
 }
 
-export function printEvalCommandOutput(
+export function printEvalCommandOutputNode(
   path: FastPath<EvalCommandOutputNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
@@ -32,7 +32,7 @@ export function printEvalCommandOutput(
   throw new Error("Node type 'EvalCommand.Output' is not implemented yet");
 }
 
-export function printEvalCommandStatement(
+export function printEvalCommandStatementNode(
   path: FastPath<EvalCommandStatementNode>,
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
