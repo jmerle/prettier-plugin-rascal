@@ -1,8 +1,8 @@
 import * as path from 'path';
-import { AST, ParserOptions, Plugin } from 'prettier';
+import { ParserOptions, Plugin } from 'prettier';
 import * as execa from 'execa';
 
-export function parse(text: string, parsers: Plugin['parsers'], options: ParserOptions): AST {
+export function parse(text: string, parsers: Plugin['parsers'], options: ParserOptions): ASTNode {
   const jarFile = path.resolve(__dirname, 'rascal-parser.jar');
   const { stdout } = execa.sync('java', ['-jar', jarFile], { input: text });
 
