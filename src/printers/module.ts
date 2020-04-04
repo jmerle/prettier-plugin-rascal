@@ -7,7 +7,5 @@ export function printModuleDefault(
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
 ): Doc {
-  // TODO(jmerle): Implement
-  console.log(path.getValue());
-  throw new Error("Node type 'Module.Default' is not implemented yet");
+  return concat([path.call(print, 'header'), hardline, hardline, path.call(print, 'body'), hardline]);
 }
