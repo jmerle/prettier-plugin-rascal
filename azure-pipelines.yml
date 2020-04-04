@@ -16,6 +16,7 @@ steps:
 
   - script: yarn jest --ci --reporters=default --reporters=jest-junit --coverage --coverageReporters=cobertura --coverageReporters=text
     displayName: Test plugin
+    continueOnError: true
 
   - task: PublishTestResults@2
     displayName: Publish plugin test results
