@@ -18,7 +18,7 @@ lines.push('');
 lines.push(
   'export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (path: FastPath<ASTNode>) => Doc): Doc {',
 );
-lines.push('const node = path.getValue();');
+lines.push('  const node = path.getValue();');
 lines.push('');
 lines.push('  switch (node._type) {');
 

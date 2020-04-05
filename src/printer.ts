@@ -131,7 +131,7 @@ import { printVisibilityDefaultNode, printVisibilityPrivateNode, printVisibility
 import { printVisitDefaultStrategyNode, printVisitGivenStrategyNode } from './printers/visit';
 
 export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (path: FastPath<ASTNode>) => Doc): Doc {
-const node = path.getValue();
+  const node = path.getValue();
 
   switch (node._type) {
     case 'Assignable.Annotation':
