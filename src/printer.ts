@@ -131,830 +131,832 @@ import { printVisibilityDefaultNode, printVisibilityPrivateNode, printVisibility
 import { printVisitDefaultStrategyNode, printVisitGivenStrategyNode } from './printers/visit';
 
 export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (path: FastPath<ASTNode>) => Doc): Doc {
-  switch (path.getValue()._type) {
+const node = path.getValue();
+
+  switch (node._type) {
     case 'Assignable.Annotation':
-      return printAssignableAnnotationNode(path as FastPath<AssignableAnnotationNode>, options, print);
+      return printAssignableAnnotationNode(node, path as FastPath<AssignableAnnotationNode>, options, print);
     case 'Assignable.Bracket':
-      return printAssignableBracketNode(path as FastPath<AssignableBracketNode>, options, print);
+      return printAssignableBracketNode(node, path as FastPath<AssignableBracketNode>, options, print);
     case 'Assignable.Constructor':
-      return printAssignableConstructorNode(path as FastPath<AssignableConstructorNode>, options, print);
+      return printAssignableConstructorNode(node, path as FastPath<AssignableConstructorNode>, options, print);
     case 'Assignable.FieldAccess':
-      return printAssignableFieldAccessNode(path as FastPath<AssignableFieldAccessNode>, options, print);
+      return printAssignableFieldAccessNode(node, path as FastPath<AssignableFieldAccessNode>, options, print);
     case 'Assignable.IfDefinedOrDefault':
-      return printAssignableIfDefinedOrDefaultNode(path as FastPath<AssignableIfDefinedOrDefaultNode>, options, print);
+      return printAssignableIfDefinedOrDefaultNode(node, path as FastPath<AssignableIfDefinedOrDefaultNode>, options, print);
     case 'Assignable.Slice':
-      return printAssignableSliceNode(path as FastPath<AssignableSliceNode>, options, print);
+      return printAssignableSliceNode(node, path as FastPath<AssignableSliceNode>, options, print);
     case 'Assignable.SliceStep':
-      return printAssignableSliceStepNode(path as FastPath<AssignableSliceStepNode>, options, print);
+      return printAssignableSliceStepNode(node, path as FastPath<AssignableSliceStepNode>, options, print);
     case 'Assignable.Subscript':
-      return printAssignableSubscriptNode(path as FastPath<AssignableSubscriptNode>, options, print);
+      return printAssignableSubscriptNode(node, path as FastPath<AssignableSubscriptNode>, options, print);
     case 'Assignable.Tuple':
-      return printAssignableTupleNode(path as FastPath<AssignableTupleNode>, options, print);
+      return printAssignableTupleNode(node, path as FastPath<AssignableTupleNode>, options, print);
     case 'Assignable.Variable':
-      return printAssignableVariableNode(path as FastPath<AssignableVariableNode>, options, print);
+      return printAssignableVariableNode(node, path as FastPath<AssignableVariableNode>, options, print);
     case 'Assignment.Addition':
-      return printAssignmentAdditionNode(path as FastPath<AssignmentAdditionNode>, options, print);
+      return printAssignmentAdditionNode(node, path as FastPath<AssignmentAdditionNode>, options, print);
     case 'Assignment.Append':
-      return printAssignmentAppendNode(path as FastPath<AssignmentAppendNode>, options, print);
+      return printAssignmentAppendNode(node, path as FastPath<AssignmentAppendNode>, options, print);
     case 'Assignment.Default':
-      return printAssignmentDefaultNode(path as FastPath<AssignmentDefaultNode>, options, print);
+      return printAssignmentDefaultNode(node, path as FastPath<AssignmentDefaultNode>, options, print);
     case 'Assignment.Division':
-      return printAssignmentDivisionNode(path as FastPath<AssignmentDivisionNode>, options, print);
+      return printAssignmentDivisionNode(node, path as FastPath<AssignmentDivisionNode>, options, print);
     case 'Assignment.IfDefined':
-      return printAssignmentIfDefinedNode(path as FastPath<AssignmentIfDefinedNode>, options, print);
+      return printAssignmentIfDefinedNode(node, path as FastPath<AssignmentIfDefinedNode>, options, print);
     case 'Assignment.Intersection':
-      return printAssignmentIntersectionNode(path as FastPath<AssignmentIntersectionNode>, options, print);
+      return printAssignmentIntersectionNode(node, path as FastPath<AssignmentIntersectionNode>, options, print);
     case 'Assignment.Product':
-      return printAssignmentProductNode(path as FastPath<AssignmentProductNode>, options, print);
+      return printAssignmentProductNode(node, path as FastPath<AssignmentProductNode>, options, print);
     case 'Assignment.Subtraction':
-      return printAssignmentSubtractionNode(path as FastPath<AssignmentSubtractionNode>, options, print);
+      return printAssignmentSubtractionNode(node, path as FastPath<AssignmentSubtractionNode>, options, print);
     case 'Assoc.Associative':
-      return printAssocAssociativeNode(path as FastPath<AssocAssociativeNode>, options, print);
+      return printAssocAssociativeNode(node, path as FastPath<AssocAssociativeNode>, options, print);
     case 'Assoc.Left':
-      return printAssocLeftNode(path as FastPath<AssocLeftNode>, options, print);
+      return printAssocLeftNode(node, path as FastPath<AssocLeftNode>, options, print);
     case 'Assoc.NonAssociative':
-      return printAssocNonAssociativeNode(path as FastPath<AssocNonAssociativeNode>, options, print);
+      return printAssocNonAssociativeNode(node, path as FastPath<AssocNonAssociativeNode>, options, print);
     case 'Assoc.Right':
-      return printAssocRightNode(path as FastPath<AssocRightNode>, options, print);
+      return printAssocRightNode(node, path as FastPath<AssocRightNode>, options, print);
     case 'Backslash.Lexical':
-      return printBackslashLexicalNode(path as FastPath<BackslashLexicalNode>, options, print);
+      return printBackslashLexicalNode(node, path as FastPath<BackslashLexicalNode>, options, print);
     case 'BasicType.Bag':
-      return printBasicTypeBagNode(path as FastPath<BasicTypeBagNode>, options, print);
+      return printBasicTypeBagNode(node, path as FastPath<BasicTypeBagNode>, options, print);
     case 'BasicType.Bool':
-      return printBasicTypeBoolNode(path as FastPath<BasicTypeBoolNode>, options, print);
+      return printBasicTypeBoolNode(node, path as FastPath<BasicTypeBoolNode>, options, print);
     case 'BasicType.DateTime':
-      return printBasicTypeDateTimeNode(path as FastPath<BasicTypeDateTimeNode>, options, print);
+      return printBasicTypeDateTimeNode(node, path as FastPath<BasicTypeDateTimeNode>, options, print);
     case 'BasicType.Int':
-      return printBasicTypeIntNode(path as FastPath<BasicTypeIntNode>, options, print);
+      return printBasicTypeIntNode(node, path as FastPath<BasicTypeIntNode>, options, print);
     case 'BasicType.List':
-      return printBasicTypeListNode(path as FastPath<BasicTypeListNode>, options, print);
+      return printBasicTypeListNode(node, path as FastPath<BasicTypeListNode>, options, print);
     case 'BasicType.ListRelation':
-      return printBasicTypeListRelationNode(path as FastPath<BasicTypeListRelationNode>, options, print);
+      return printBasicTypeListRelationNode(node, path as FastPath<BasicTypeListRelationNode>, options, print);
     case 'BasicType.Loc':
-      return printBasicTypeLocNode(path as FastPath<BasicTypeLocNode>, options, print);
+      return printBasicTypeLocNode(node, path as FastPath<BasicTypeLocNode>, options, print);
     case 'BasicType.Map':
-      return printBasicTypeMapNode(path as FastPath<BasicTypeMapNode>, options, print);
+      return printBasicTypeMapNode(node, path as FastPath<BasicTypeMapNode>, options, print);
     case 'BasicType.Node':
-      return printBasicTypeNodeNode(path as FastPath<BasicTypeNodeNode>, options, print);
+      return printBasicTypeNodeNode(node, path as FastPath<BasicTypeNodeNode>, options, print);
     case 'BasicType.Num':
-      return printBasicTypeNumNode(path as FastPath<BasicTypeNumNode>, options, print);
+      return printBasicTypeNumNode(node, path as FastPath<BasicTypeNumNode>, options, print);
     case 'BasicType.Rational':
-      return printBasicTypeRationalNode(path as FastPath<BasicTypeRationalNode>, options, print);
+      return printBasicTypeRationalNode(node, path as FastPath<BasicTypeRationalNode>, options, print);
     case 'BasicType.Real':
-      return printBasicTypeRealNode(path as FastPath<BasicTypeRealNode>, options, print);
+      return printBasicTypeRealNode(node, path as FastPath<BasicTypeRealNode>, options, print);
     case 'BasicType.Relation':
-      return printBasicTypeRelationNode(path as FastPath<BasicTypeRelationNode>, options, print);
+      return printBasicTypeRelationNode(node, path as FastPath<BasicTypeRelationNode>, options, print);
     case 'BasicType.Set':
-      return printBasicTypeSetNode(path as FastPath<BasicTypeSetNode>, options, print);
+      return printBasicTypeSetNode(node, path as FastPath<BasicTypeSetNode>, options, print);
     case 'BasicType.String':
-      return printBasicTypeStringNode(path as FastPath<BasicTypeStringNode>, options, print);
+      return printBasicTypeStringNode(node, path as FastPath<BasicTypeStringNode>, options, print);
     case 'BasicType.Tuple':
-      return printBasicTypeTupleNode(path as FastPath<BasicTypeTupleNode>, options, print);
+      return printBasicTypeTupleNode(node, path as FastPath<BasicTypeTupleNode>, options, print);
     case 'BasicType.Type':
-      return printBasicTypeTypeNode(path as FastPath<BasicTypeTypeNode>, options, print);
+      return printBasicTypeTypeNode(node, path as FastPath<BasicTypeTypeNode>, options, print);
     case 'BasicType.Value':
-      return printBasicTypeValueNode(path as FastPath<BasicTypeValueNode>, options, print);
+      return printBasicTypeValueNode(node, path as FastPath<BasicTypeValueNode>, options, print);
     case 'BasicType.Void':
-      return printBasicTypeVoidNode(path as FastPath<BasicTypeVoidNode>, options, print);
+      return printBasicTypeVoidNode(node, path as FastPath<BasicTypeVoidNode>, options, print);
     case 'Body.Toplevels':
-      return printBodyToplevelsNode(path as FastPath<BodyToplevelsNode>, options, print);
+      return printBodyToplevelsNode(node, path as FastPath<BodyToplevelsNode>, options, print);
     case 'BooleanLiteral.Lexical':
-      return printBooleanLiteralLexicalNode(path as FastPath<BooleanLiteralLexicalNode>, options, print);
+      return printBooleanLiteralLexicalNode(node, path as FastPath<BooleanLiteralLexicalNode>, options, print);
     case 'Bound.Default':
-      return printBoundDefaultNode(path as FastPath<BoundDefaultNode>, options, print);
+      return printBoundDefaultNode(node, path as FastPath<BoundDefaultNode>, options, print);
     case 'Bound.Empty':
-      return printBoundEmptyNode(path as FastPath<BoundEmptyNode>, options, print);
+      return printBoundEmptyNode(node, path as FastPath<BoundEmptyNode>, options, print);
     case 'Case.Default':
-      return printCaseDefaultNode(path as FastPath<CaseDefaultNode>, options, print);
+      return printCaseDefaultNode(node, path as FastPath<CaseDefaultNode>, options, print);
     case 'Case.PatternWithAction':
-      return printCasePatternWithActionNode(path as FastPath<CasePatternWithActionNode>, options, print);
+      return printCasePatternWithActionNode(node, path as FastPath<CasePatternWithActionNode>, options, print);
     case 'CaseInsensitiveStringConstant.Lexical':
-      return printCaseInsensitiveStringConstantLexicalNode(path as FastPath<CaseInsensitiveStringConstantLexicalNode>, options, print);
+      return printCaseInsensitiveStringConstantLexicalNode(node, path as FastPath<CaseInsensitiveStringConstantLexicalNode>, options, print);
     case 'Catch.Binding':
-      return printCatchBindingNode(path as FastPath<CatchBindingNode>, options, print);
+      return printCatchBindingNode(node, path as FastPath<CatchBindingNode>, options, print);
     case 'Catch.Default':
-      return printCatchDefaultNode(path as FastPath<CatchDefaultNode>, options, print);
+      return printCatchDefaultNode(node, path as FastPath<CatchDefaultNode>, options, print);
     case 'Char.Lexical':
-      return printCharLexicalNode(path as FastPath<CharLexicalNode>, options, print);
+      return printCharLexicalNode(node, path as FastPath<CharLexicalNode>, options, print);
     case 'Class.Bracket':
-      return printClassBracketNode(path as FastPath<ClassBracketNode>, options, print);
+      return printClassBracketNode(node, path as FastPath<ClassBracketNode>, options, print);
     case 'Class.Complement':
-      return printClassComplementNode(path as FastPath<ClassComplementNode>, options, print);
+      return printClassComplementNode(node, path as FastPath<ClassComplementNode>, options, print);
     case 'Class.Difference':
-      return printClassDifferenceNode(path as FastPath<ClassDifferenceNode>, options, print);
+      return printClassDifferenceNode(node, path as FastPath<ClassDifferenceNode>, options, print);
     case 'Class.Intersection':
-      return printClassIntersectionNode(path as FastPath<ClassIntersectionNode>, options, print);
+      return printClassIntersectionNode(node, path as FastPath<ClassIntersectionNode>, options, print);
     case 'Class.SimpleCharclass':
-      return printClassSimpleCharclassNode(path as FastPath<ClassSimpleCharclassNode>, options, print);
+      return printClassSimpleCharclassNode(node, path as FastPath<ClassSimpleCharclassNode>, options, print);
     case 'Class.Union':
-      return printClassUnionNode(path as FastPath<ClassUnionNode>, options, print);
+      return printClassUnionNode(node, path as FastPath<ClassUnionNode>, options, print);
     case 'Command.Declaration':
-      return printCommandDeclarationNode(path as FastPath<CommandDeclarationNode>, options, print);
+      return printCommandDeclarationNode(node, path as FastPath<CommandDeclarationNode>, options, print);
     case 'Command.Expression':
-      return printCommandExpressionNode(path as FastPath<CommandExpressionNode>, options, print);
+      return printCommandExpressionNode(node, path as FastPath<CommandExpressionNode>, options, print);
     case 'Command.Import':
-      return printCommandImportNode(path as FastPath<CommandImportNode>, options, print);
+      return printCommandImportNode(node, path as FastPath<CommandImportNode>, options, print);
     case 'Command.Shell':
-      return printCommandShellNode(path as FastPath<CommandShellNode>, options, print);
+      return printCommandShellNode(node, path as FastPath<CommandShellNode>, options, print);
     case 'Command.Statement':
-      return printCommandStatementNode(path as FastPath<CommandStatementNode>, options, print);
+      return printCommandStatementNode(node, path as FastPath<CommandStatementNode>, options, print);
     case 'Commands.Commandlist':
-      return printCommandsCommandlistNode(path as FastPath<CommandsCommandlistNode>, options, print);
+      return printCommandsCommandlistNode(node, path as FastPath<CommandsCommandlistNode>, options, print);
     case 'Comment.Lexical':
-      return printCommentLexicalNode(path as FastPath<CommentLexicalNode>, options, print);
+      return printCommentLexicalNode(node, path as FastPath<CommentLexicalNode>, options, print);
     case 'CommonKeywordParameters.Absent':
-      return printCommonKeywordParametersAbsentNode(path as FastPath<CommonKeywordParametersAbsentNode>, options, print);
+      return printCommonKeywordParametersAbsentNode(node, path as FastPath<CommonKeywordParametersAbsentNode>, options, print);
     case 'CommonKeywordParameters.Present':
-      return printCommonKeywordParametersPresentNode(path as FastPath<CommonKeywordParametersPresentNode>, options, print);
+      return printCommonKeywordParametersPresentNode(node, path as FastPath<CommonKeywordParametersPresentNode>, options, print);
     case 'Comprehension.List':
-      return printComprehensionListNode(path as FastPath<ComprehensionListNode>, options, print);
+      return printComprehensionListNode(node, path as FastPath<ComprehensionListNode>, options, print);
     case 'Comprehension.Map':
-      return printComprehensionMapNode(path as FastPath<ComprehensionMapNode>, options, print);
+      return printComprehensionMapNode(node, path as FastPath<ComprehensionMapNode>, options, print);
     case 'Comprehension.Set':
-      return printComprehensionSetNode(path as FastPath<ComprehensionSetNode>, options, print);
+      return printComprehensionSetNode(node, path as FastPath<ComprehensionSetNode>, options, print);
     case 'Concrete.Lexical':
-      return printConcreteLexicalNode(path as FastPath<ConcreteLexicalNode>, options, print);
+      return printConcreteLexicalNode(node, path as FastPath<ConcreteLexicalNode>, options, print);
     case 'ConcreteHole.One':
-      return printConcreteHoleOneNode(path as FastPath<ConcreteHoleOneNode>, options, print);
+      return printConcreteHoleOneNode(node, path as FastPath<ConcreteHoleOneNode>, options, print);
     case 'ConcretePart.Lexical':
-      return printConcretePartLexicalNode(path as FastPath<ConcretePartLexicalNode>, options, print);
+      return printConcretePartLexicalNode(node, path as FastPath<ConcretePartLexicalNode>, options, print);
     case 'DataTarget.Empty':
-      return printDataTargetEmptyNode(path as FastPath<DataTargetEmptyNode>, options, print);
+      return printDataTargetEmptyNode(node, path as FastPath<DataTargetEmptyNode>, options, print);
     case 'DataTarget.Labeled':
-      return printDataTargetLabeledNode(path as FastPath<DataTargetLabeledNode>, options, print);
+      return printDataTargetLabeledNode(node, path as FastPath<DataTargetLabeledNode>, options, print);
     case 'DataTypeSelector.Selector':
-      return printDataTypeSelectorSelectorNode(path as FastPath<DataTypeSelectorSelectorNode>, options, print);
+      return printDataTypeSelectorSelectorNode(node, path as FastPath<DataTypeSelectorSelectorNode>, options, print);
     case 'DateAndTime.Lexical':
-      return printDateAndTimeLexicalNode(path as FastPath<DateAndTimeLexicalNode>, options, print);
+      return printDateAndTimeLexicalNode(node, path as FastPath<DateAndTimeLexicalNode>, options, print);
     case 'DatePart.Lexical':
-      return printDatePartLexicalNode(path as FastPath<DatePartLexicalNode>, options, print);
+      return printDatePartLexicalNode(node, path as FastPath<DatePartLexicalNode>, options, print);
     case 'DateTimeLiteral.DateAndTimeLiteral':
-      return printDateTimeLiteralDateAndTimeLiteralNode(path as FastPath<DateTimeLiteralDateAndTimeLiteralNode>, options, print);
+      return printDateTimeLiteralDateAndTimeLiteralNode(node, path as FastPath<DateTimeLiteralDateAndTimeLiteralNode>, options, print);
     case 'DateTimeLiteral.DateLiteral':
-      return printDateTimeLiteralDateLiteralNode(path as FastPath<DateTimeLiteralDateLiteralNode>, options, print);
+      return printDateTimeLiteralDateLiteralNode(node, path as FastPath<DateTimeLiteralDateLiteralNode>, options, print);
     case 'DateTimeLiteral.TimeLiteral':
-      return printDateTimeLiteralTimeLiteralNode(path as FastPath<DateTimeLiteralTimeLiteralNode>, options, print);
+      return printDateTimeLiteralTimeLiteralNode(node, path as FastPath<DateTimeLiteralTimeLiteralNode>, options, print);
     case 'DecimalIntegerLiteral.Lexical':
-      return printDecimalIntegerLiteralLexicalNode(path as FastPath<DecimalIntegerLiteralLexicalNode>, options, print);
+      return printDecimalIntegerLiteralLexicalNode(node, path as FastPath<DecimalIntegerLiteralLexicalNode>, options, print);
     case 'Declaration.Alias':
-      return printDeclarationAliasNode(path as FastPath<DeclarationAliasNode>, options, print);
+      return printDeclarationAliasNode(node, path as FastPath<DeclarationAliasNode>, options, print);
     case 'Declaration.Annotation':
-      return printDeclarationAnnotationNode(path as FastPath<DeclarationAnnotationNode>, options, print);
+      return printDeclarationAnnotationNode(node, path as FastPath<DeclarationAnnotationNode>, options, print);
     case 'Declaration.Data':
-      return printDeclarationDataNode(path as FastPath<DeclarationDataNode>, options, print);
+      return printDeclarationDataNode(node, path as FastPath<DeclarationDataNode>, options, print);
     case 'Declaration.DataAbstract':
-      return printDeclarationDataAbstractNode(path as FastPath<DeclarationDataAbstractNode>, options, print);
+      return printDeclarationDataAbstractNode(node, path as FastPath<DeclarationDataAbstractNode>, options, print);
     case 'Declaration.Function':
-      return printDeclarationFunctionNode(path as FastPath<DeclarationFunctionNode>, options, print);
+      return printDeclarationFunctionNode(node, path as FastPath<DeclarationFunctionNode>, options, print);
     case 'Declaration.Tag':
-      return printDeclarationTagNode(path as FastPath<DeclarationTagNode>, options, print);
+      return printDeclarationTagNode(node, path as FastPath<DeclarationTagNode>, options, print);
     case 'Declaration.Variable':
-      return printDeclarationVariableNode(path as FastPath<DeclarationVariableNode>, options, print);
+      return printDeclarationVariableNode(node, path as FastPath<DeclarationVariableNode>, options, print);
     case 'Declarator.Default':
-      return printDeclaratorDefaultNode(path as FastPath<DeclaratorDefaultNode>, options, print);
+      return printDeclaratorDefaultNode(node, path as FastPath<DeclaratorDefaultNode>, options, print);
     case 'EvalCommand.Declaration':
-      return printEvalCommandDeclarationNode(path as FastPath<EvalCommandDeclarationNode>, options, print);
+      return printEvalCommandDeclarationNode(node, path as FastPath<EvalCommandDeclarationNode>, options, print);
     case 'EvalCommand.Import':
-      return printEvalCommandImportNode(path as FastPath<EvalCommandImportNode>, options, print);
+      return printEvalCommandImportNode(node, path as FastPath<EvalCommandImportNode>, options, print);
     case 'EvalCommand.Output':
-      return printEvalCommandOutputNode(path as FastPath<EvalCommandOutputNode>, options, print);
+      return printEvalCommandOutputNode(node, path as FastPath<EvalCommandOutputNode>, options, print);
     case 'EvalCommand.Statement':
-      return printEvalCommandStatementNode(path as FastPath<EvalCommandStatementNode>, options, print);
+      return printEvalCommandStatementNode(node, path as FastPath<EvalCommandStatementNode>, options, print);
     case 'Expression.Addition':
-      return printExpressionAdditionNode(path as FastPath<ExpressionAdditionNode>, options, print);
+      return printExpressionAdditionNode(node, path as FastPath<ExpressionAdditionNode>, options, print);
     case 'Expression.All':
-      return printExpressionAllNode(path as FastPath<ExpressionAllNode>, options, print);
+      return printExpressionAllNode(node, path as FastPath<ExpressionAllNode>, options, print);
     case 'Expression.And':
-      return printExpressionAndNode(path as FastPath<ExpressionAndNode>, options, print);
+      return printExpressionAndNode(node, path as FastPath<ExpressionAndNode>, options, print);
     case 'Expression.Anti':
-      return printExpressionAntiNode(path as FastPath<ExpressionAntiNode>, options, print);
+      return printExpressionAntiNode(node, path as FastPath<ExpressionAntiNode>, options, print);
     case 'Expression.Any':
-      return printExpressionAnyNode(path as FastPath<ExpressionAnyNode>, options, print);
+      return printExpressionAnyNode(node, path as FastPath<ExpressionAnyNode>, options, print);
     case 'Expression.AppendAfter':
-      return printExpressionAppendAfterNode(path as FastPath<ExpressionAppendAfterNode>, options, print);
+      return printExpressionAppendAfterNode(node, path as FastPath<ExpressionAppendAfterNode>, options, print);
     case 'Expression.AsType':
-      return printExpressionAsTypeNode(path as FastPath<ExpressionAsTypeNode>, options, print);
+      return printExpressionAsTypeNode(node, path as FastPath<ExpressionAsTypeNode>, options, print);
     case 'Expression.Bracket':
-      return printExpressionBracketNode(path as FastPath<ExpressionBracketNode>, options, print);
+      return printExpressionBracketNode(node, path as FastPath<ExpressionBracketNode>, options, print);
     case 'Expression.CallOrTree':
-      return printExpressionCallOrTreeNode(path as FastPath<ExpressionCallOrTreeNode>, options, print);
+      return printExpressionCallOrTreeNode(node, path as FastPath<ExpressionCallOrTreeNode>, options, print);
     case 'Expression.Closure':
-      return printExpressionClosureNode(path as FastPath<ExpressionClosureNode>, options, print);
+      return printExpressionClosureNode(node, path as FastPath<ExpressionClosureNode>, options, print);
     case 'Expression.Composition':
-      return printExpressionCompositionNode(path as FastPath<ExpressionCompositionNode>, options, print);
+      return printExpressionCompositionNode(node, path as FastPath<ExpressionCompositionNode>, options, print);
     case 'Expression.Comprehension':
-      return printExpressionComprehensionNode(path as FastPath<ExpressionComprehensionNode>, options, print);
+      return printExpressionComprehensionNode(node, path as FastPath<ExpressionComprehensionNode>, options, print);
     case 'Expression.Concrete':
-      return printExpressionConcreteNode(path as FastPath<ExpressionConcreteNode>, options, print);
+      return printExpressionConcreteNode(node, path as FastPath<ExpressionConcreteNode>, options, print);
     case 'Expression.Descendant':
-      return printExpressionDescendantNode(path as FastPath<ExpressionDescendantNode>, options, print);
+      return printExpressionDescendantNode(node, path as FastPath<ExpressionDescendantNode>, options, print);
     case 'Expression.Division':
-      return printExpressionDivisionNode(path as FastPath<ExpressionDivisionNode>, options, print);
+      return printExpressionDivisionNode(node, path as FastPath<ExpressionDivisionNode>, options, print);
     case 'Expression.Enumerator':
-      return printExpressionEnumeratorNode(path as FastPath<ExpressionEnumeratorNode>, options, print);
+      return printExpressionEnumeratorNode(node, path as FastPath<ExpressionEnumeratorNode>, options, print);
     case 'Expression.Equals':
-      return printExpressionEqualsNode(path as FastPath<ExpressionEqualsNode>, options, print);
+      return printExpressionEqualsNode(node, path as FastPath<ExpressionEqualsNode>, options, print);
     case 'Expression.Equivalence':
-      return printExpressionEquivalenceNode(path as FastPath<ExpressionEquivalenceNode>, options, print);
+      return printExpressionEquivalenceNode(node, path as FastPath<ExpressionEquivalenceNode>, options, print);
     case 'Expression.FieldAccess':
-      return printExpressionFieldAccessNode(path as FastPath<ExpressionFieldAccessNode>, options, print);
+      return printExpressionFieldAccessNode(node, path as FastPath<ExpressionFieldAccessNode>, options, print);
     case 'Expression.FieldProject':
-      return printExpressionFieldProjectNode(path as FastPath<ExpressionFieldProjectNode>, options, print);
+      return printExpressionFieldProjectNode(node, path as FastPath<ExpressionFieldProjectNode>, options, print);
     case 'Expression.FieldUpdate':
-      return printExpressionFieldUpdateNode(path as FastPath<ExpressionFieldUpdateNode>, options, print);
+      return printExpressionFieldUpdateNode(node, path as FastPath<ExpressionFieldUpdateNode>, options, print);
     case 'Expression.GetAnnotation':
-      return printExpressionGetAnnotationNode(path as FastPath<ExpressionGetAnnotationNode>, options, print);
+      return printExpressionGetAnnotationNode(node, path as FastPath<ExpressionGetAnnotationNode>, options, print);
     case 'Expression.GreaterThan':
-      return printExpressionGreaterThanNode(path as FastPath<ExpressionGreaterThanNode>, options, print);
+      return printExpressionGreaterThanNode(node, path as FastPath<ExpressionGreaterThanNode>, options, print);
     case 'Expression.GreaterThanOrEq':
-      return printExpressionGreaterThanOrEqNode(path as FastPath<ExpressionGreaterThanOrEqNode>, options, print);
+      return printExpressionGreaterThanOrEqNode(node, path as FastPath<ExpressionGreaterThanOrEqNode>, options, print);
     case 'Expression.Has':
-      return printExpressionHasNode(path as FastPath<ExpressionHasNode>, options, print);
+      return printExpressionHasNode(node, path as FastPath<ExpressionHasNode>, options, print);
     case 'Expression.IfDefinedOtherwise':
-      return printExpressionIfDefinedOtherwiseNode(path as FastPath<ExpressionIfDefinedOtherwiseNode>, options, print);
+      return printExpressionIfDefinedOtherwiseNode(node, path as FastPath<ExpressionIfDefinedOtherwiseNode>, options, print);
     case 'Expression.IfThenElse':
-      return printExpressionIfThenElseNode(path as FastPath<ExpressionIfThenElseNode>, options, print);
+      return printExpressionIfThenElseNode(node, path as FastPath<ExpressionIfThenElseNode>, options, print);
     case 'Expression.Implication':
-      return printExpressionImplicationNode(path as FastPath<ExpressionImplicationNode>, options, print);
+      return printExpressionImplicationNode(node, path as FastPath<ExpressionImplicationNode>, options, print);
     case 'Expression.In':
-      return printExpressionInNode(path as FastPath<ExpressionInNode>, options, print);
+      return printExpressionInNode(node, path as FastPath<ExpressionInNode>, options, print);
     case 'Expression.InsertBefore':
-      return printExpressionInsertBeforeNode(path as FastPath<ExpressionInsertBeforeNode>, options, print);
+      return printExpressionInsertBeforeNode(node, path as FastPath<ExpressionInsertBeforeNode>, options, print);
     case 'Expression.Intersection':
-      return printExpressionIntersectionNode(path as FastPath<ExpressionIntersectionNode>, options, print);
+      return printExpressionIntersectionNode(node, path as FastPath<ExpressionIntersectionNode>, options, print);
     case 'Expression.Is':
-      return printExpressionIsNode(path as FastPath<ExpressionIsNode>, options, print);
+      return printExpressionIsNode(node, path as FastPath<ExpressionIsNode>, options, print);
     case 'Expression.IsDefined':
-      return printExpressionIsDefinedNode(path as FastPath<ExpressionIsDefinedNode>, options, print);
+      return printExpressionIsDefinedNode(node, path as FastPath<ExpressionIsDefinedNode>, options, print);
     case 'Expression.It':
-      return printExpressionItNode(path as FastPath<ExpressionItNode>, options, print);
+      return printExpressionItNode(node, path as FastPath<ExpressionItNode>, options, print);
     case 'Expression.Join':
-      return printExpressionJoinNode(path as FastPath<ExpressionJoinNode>, options, print);
+      return printExpressionJoinNode(node, path as FastPath<ExpressionJoinNode>, options, print);
     case 'Expression.LessThan':
-      return printExpressionLessThanNode(path as FastPath<ExpressionLessThanNode>, options, print);
+      return printExpressionLessThanNode(node, path as FastPath<ExpressionLessThanNode>, options, print);
     case 'Expression.LessThanOrEq':
-      return printExpressionLessThanOrEqNode(path as FastPath<ExpressionLessThanOrEqNode>, options, print);
+      return printExpressionLessThanOrEqNode(node, path as FastPath<ExpressionLessThanOrEqNode>, options, print);
     case 'Expression.List':
-      return printExpressionListNode(path as FastPath<ExpressionListNode>, options, print);
+      return printExpressionListNode(node, path as FastPath<ExpressionListNode>, options, print);
     case 'Expression.Literal':
-      return printExpressionLiteralNode(path as FastPath<ExpressionLiteralNode>, options, print);
+      return printExpressionLiteralNode(node, path as FastPath<ExpressionLiteralNode>, options, print);
     case 'Expression.Map':
-      return printExpressionMapNode(path as FastPath<ExpressionMapNode>, options, print);
+      return printExpressionMapNode(node, path as FastPath<ExpressionMapNode>, options, print);
     case 'Expression.Match':
-      return printExpressionMatchNode(path as FastPath<ExpressionMatchNode>, options, print);
+      return printExpressionMatchNode(node, path as FastPath<ExpressionMatchNode>, options, print);
     case 'Expression.Modulo':
-      return printExpressionModuloNode(path as FastPath<ExpressionModuloNode>, options, print);
+      return printExpressionModuloNode(node, path as FastPath<ExpressionModuloNode>, options, print);
     case 'Expression.MultiVariable':
-      return printExpressionMultiVariableNode(path as FastPath<ExpressionMultiVariableNode>, options, print);
+      return printExpressionMultiVariableNode(node, path as FastPath<ExpressionMultiVariableNode>, options, print);
     case 'Expression.Negation':
-      return printExpressionNegationNode(path as FastPath<ExpressionNegationNode>, options, print);
+      return printExpressionNegationNode(node, path as FastPath<ExpressionNegationNode>, options, print);
     case 'Expression.Negative':
-      return printExpressionNegativeNode(path as FastPath<ExpressionNegativeNode>, options, print);
+      return printExpressionNegativeNode(node, path as FastPath<ExpressionNegativeNode>, options, print);
     case 'Expression.NoMatch':
-      return printExpressionNoMatchNode(path as FastPath<ExpressionNoMatchNode>, options, print);
+      return printExpressionNoMatchNode(node, path as FastPath<ExpressionNoMatchNode>, options, print);
     case 'Expression.NonEmptyBlock':
-      return printExpressionNonEmptyBlockNode(path as FastPath<ExpressionNonEmptyBlockNode>, options, print);
+      return printExpressionNonEmptyBlockNode(node, path as FastPath<ExpressionNonEmptyBlockNode>, options, print);
     case 'Expression.NonEquals':
-      return printExpressionNonEqualsNode(path as FastPath<ExpressionNonEqualsNode>, options, print);
+      return printExpressionNonEqualsNode(node, path as FastPath<ExpressionNonEqualsNode>, options, print);
     case 'Expression.NotIn':
-      return printExpressionNotInNode(path as FastPath<ExpressionNotInNode>, options, print);
+      return printExpressionNotInNode(node, path as FastPath<ExpressionNotInNode>, options, print);
     case 'Expression.Or':
-      return printExpressionOrNode(path as FastPath<ExpressionOrNode>, options, print);
+      return printExpressionOrNode(node, path as FastPath<ExpressionOrNode>, options, print);
     case 'Expression.Product':
-      return printExpressionProductNode(path as FastPath<ExpressionProductNode>, options, print);
+      return printExpressionProductNode(node, path as FastPath<ExpressionProductNode>, options, print);
     case 'Expression.QualifiedName':
-      return printExpressionQualifiedNameNode(path as FastPath<ExpressionQualifiedNameNode>, options, print);
+      return printExpressionQualifiedNameNode(node, path as FastPath<ExpressionQualifiedNameNode>, options, print);
     case 'Expression.Range':
-      return printExpressionRangeNode(path as FastPath<ExpressionRangeNode>, options, print);
+      return printExpressionRangeNode(node, path as FastPath<ExpressionRangeNode>, options, print);
     case 'Expression.Reducer':
-      return printExpressionReducerNode(path as FastPath<ExpressionReducerNode>, options, print);
+      return printExpressionReducerNode(node, path as FastPath<ExpressionReducerNode>, options, print);
     case 'Expression.ReifiedType':
-      return printExpressionReifiedTypeNode(path as FastPath<ExpressionReifiedTypeNode>, options, print);
+      return printExpressionReifiedTypeNode(node, path as FastPath<ExpressionReifiedTypeNode>, options, print);
     case 'Expression.ReifyType':
-      return printExpressionReifyTypeNode(path as FastPath<ExpressionReifyTypeNode>, options, print);
+      return printExpressionReifyTypeNode(node, path as FastPath<ExpressionReifyTypeNode>, options, print);
     case 'Expression.Remainder':
-      return printExpressionRemainderNode(path as FastPath<ExpressionRemainderNode>, options, print);
+      return printExpressionRemainderNode(node, path as FastPath<ExpressionRemainderNode>, options, print);
     case 'Expression.Set':
-      return printExpressionSetNode(path as FastPath<ExpressionSetNode>, options, print);
+      return printExpressionSetNode(node, path as FastPath<ExpressionSetNode>, options, print);
     case 'Expression.SetAnnotation':
-      return printExpressionSetAnnotationNode(path as FastPath<ExpressionSetAnnotationNode>, options, print);
+      return printExpressionSetAnnotationNode(node, path as FastPath<ExpressionSetAnnotationNode>, options, print);
     case 'Expression.Slice':
-      return printExpressionSliceNode(path as FastPath<ExpressionSliceNode>, options, print);
+      return printExpressionSliceNode(node, path as FastPath<ExpressionSliceNode>, options, print);
     case 'Expression.SliceStep':
-      return printExpressionSliceStepNode(path as FastPath<ExpressionSliceStepNode>, options, print);
+      return printExpressionSliceStepNode(node, path as FastPath<ExpressionSliceStepNode>, options, print);
     case 'Expression.Splice':
-      return printExpressionSpliceNode(path as FastPath<ExpressionSpliceNode>, options, print);
+      return printExpressionSpliceNode(node, path as FastPath<ExpressionSpliceNode>, options, print);
     case 'Expression.SplicePlus':
-      return printExpressionSplicePlusNode(path as FastPath<ExpressionSplicePlusNode>, options, print);
+      return printExpressionSplicePlusNode(node, path as FastPath<ExpressionSplicePlusNode>, options, print);
     case 'Expression.StepRange':
-      return printExpressionStepRangeNode(path as FastPath<ExpressionStepRangeNode>, options, print);
+      return printExpressionStepRangeNode(node, path as FastPath<ExpressionStepRangeNode>, options, print);
     case 'Expression.Subscript':
-      return printExpressionSubscriptNode(path as FastPath<ExpressionSubscriptNode>, options, print);
+      return printExpressionSubscriptNode(node, path as FastPath<ExpressionSubscriptNode>, options, print);
     case 'Expression.Subtraction':
-      return printExpressionSubtractionNode(path as FastPath<ExpressionSubtractionNode>, options, print);
+      return printExpressionSubtractionNode(node, path as FastPath<ExpressionSubtractionNode>, options, print);
     case 'Expression.TransitiveClosure':
-      return printExpressionTransitiveClosureNode(path as FastPath<ExpressionTransitiveClosureNode>, options, print);
+      return printExpressionTransitiveClosureNode(node, path as FastPath<ExpressionTransitiveClosureNode>, options, print);
     case 'Expression.TransitiveReflexiveClosure':
-      return printExpressionTransitiveReflexiveClosureNode(path as FastPath<ExpressionTransitiveReflexiveClosureNode>, options, print);
+      return printExpressionTransitiveReflexiveClosureNode(node, path as FastPath<ExpressionTransitiveReflexiveClosureNode>, options, print);
     case 'Expression.Tuple':
-      return printExpressionTupleNode(path as FastPath<ExpressionTupleNode>, options, print);
+      return printExpressionTupleNode(node, path as FastPath<ExpressionTupleNode>, options, print);
     case 'Expression.TypedVariable':
-      return printExpressionTypedVariableNode(path as FastPath<ExpressionTypedVariableNode>, options, print);
+      return printExpressionTypedVariableNode(node, path as FastPath<ExpressionTypedVariableNode>, options, print);
     case 'Expression.TypedVariableBecomes':
-      return printExpressionTypedVariableBecomesNode(path as FastPath<ExpressionTypedVariableBecomesNode>, options, print);
+      return printExpressionTypedVariableBecomesNode(node, path as FastPath<ExpressionTypedVariableBecomesNode>, options, print);
     case 'Expression.VariableBecomes':
-      return printExpressionVariableBecomesNode(path as FastPath<ExpressionVariableBecomesNode>, options, print);
+      return printExpressionVariableBecomesNode(node, path as FastPath<ExpressionVariableBecomesNode>, options, print);
     case 'Expression.Visit':
-      return printExpressionVisitNode(path as FastPath<ExpressionVisitNode>, options, print);
+      return printExpressionVisitNode(node, path as FastPath<ExpressionVisitNode>, options, print);
     case 'Expression.VoidClosure':
-      return printExpressionVoidClosureNode(path as FastPath<ExpressionVoidClosureNode>, options, print);
+      return printExpressionVoidClosureNode(node, path as FastPath<ExpressionVoidClosureNode>, options, print);
     case 'Field.Index':
-      return printFieldIndexNode(path as FastPath<FieldIndexNode>, options, print);
+      return printFieldIndexNode(node, path as FastPath<FieldIndexNode>, options, print);
     case 'Field.Name':
-      return printFieldNameNode(path as FastPath<FieldNameNode>, options, print);
+      return printFieldNameNode(node, path as FastPath<FieldNameNode>, options, print);
     case 'Formals.Default':
-      return printFormalsDefaultNode(path as FastPath<FormalsDefaultNode>, options, print);
+      return printFormalsDefaultNode(node, path as FastPath<FormalsDefaultNode>, options, print);
     case 'FunctionBody.Default':
-      return printFunctionBodyDefaultNode(path as FastPath<FunctionBodyDefaultNode>, options, print);
+      return printFunctionBodyDefaultNode(node, path as FastPath<FunctionBodyDefaultNode>, options, print);
     case 'FunctionDeclaration.Abstract':
-      return printFunctionDeclarationAbstractNode(path as FastPath<FunctionDeclarationAbstractNode>, options, print);
+      return printFunctionDeclarationAbstractNode(node, path as FastPath<FunctionDeclarationAbstractNode>, options, print);
     case 'FunctionDeclaration.Conditional':
-      return printFunctionDeclarationConditionalNode(path as FastPath<FunctionDeclarationConditionalNode>, options, print);
+      return printFunctionDeclarationConditionalNode(node, path as FastPath<FunctionDeclarationConditionalNode>, options, print);
     case 'FunctionDeclaration.Default':
-      return printFunctionDeclarationDefaultNode(path as FastPath<FunctionDeclarationDefaultNode>, options, print);
+      return printFunctionDeclarationDefaultNode(node, path as FastPath<FunctionDeclarationDefaultNode>, options, print);
     case 'FunctionDeclaration.Expression':
-      return printFunctionDeclarationExpressionNode(path as FastPath<FunctionDeclarationExpressionNode>, options, print);
+      return printFunctionDeclarationExpressionNode(node, path as FastPath<FunctionDeclarationExpressionNode>, options, print);
     case 'FunctionModifier.Default':
-      return printFunctionModifierDefaultNode(path as FastPath<FunctionModifierDefaultNode>, options, print);
+      return printFunctionModifierDefaultNode(node, path as FastPath<FunctionModifierDefaultNode>, options, print);
     case 'FunctionModifier.Java':
-      return printFunctionModifierJavaNode(path as FastPath<FunctionModifierJavaNode>, options, print);
+      return printFunctionModifierJavaNode(node, path as FastPath<FunctionModifierJavaNode>, options, print);
     case 'FunctionModifier.Test':
-      return printFunctionModifierTestNode(path as FastPath<FunctionModifierTestNode>, options, print);
+      return printFunctionModifierTestNode(node, path as FastPath<FunctionModifierTestNode>, options, print);
     case 'FunctionModifiers.Modifierlist':
-      return printFunctionModifiersModifierlistNode(path as FastPath<FunctionModifiersModifierlistNode>, options, print);
+      return printFunctionModifiersModifierlistNode(node, path as FastPath<FunctionModifiersModifierlistNode>, options, print);
     case 'FunctionType.TypeArguments':
-      return printFunctionTypeTypeArgumentsNode(path as FastPath<FunctionTypeTypeArgumentsNode>, options, print);
+      return printFunctionTypeTypeArgumentsNode(node, path as FastPath<FunctionTypeTypeArgumentsNode>, options, print);
     case 'Header.Default':
-      return printHeaderDefaultNode(path as FastPath<HeaderDefaultNode>, options, print);
+      return printHeaderDefaultNode(node, path as FastPath<HeaderDefaultNode>, options, print);
     case 'Header.Parameters':
-      return printHeaderParametersNode(path as FastPath<HeaderParametersNode>, options, print);
+      return printHeaderParametersNode(node, path as FastPath<HeaderParametersNode>, options, print);
     case 'HexIntegerLiteral.Lexical':
-      return printHexIntegerLiteralLexicalNode(path as FastPath<HexIntegerLiteralLexicalNode>, options, print);
+      return printHexIntegerLiteralLexicalNode(node, path as FastPath<HexIntegerLiteralLexicalNode>, options, print);
     case 'Import.Default':
-      return printImportDefaultNode(path as FastPath<ImportDefaultNode>, options, print);
+      return printImportDefaultNode(node, path as FastPath<ImportDefaultNode>, options, print);
     case 'Import.Extend':
-      return printImportExtendNode(path as FastPath<ImportExtendNode>, options, print);
+      return printImportExtendNode(node, path as FastPath<ImportExtendNode>, options, print);
     case 'Import.External':
-      return printImportExternalNode(path as FastPath<ImportExternalNode>, options, print);
+      return printImportExternalNode(node, path as FastPath<ImportExternalNode>, options, print);
     case 'Import.Syntax':
-      return printImportSyntaxNode(path as FastPath<ImportSyntaxNode>, options, print);
+      return printImportSyntaxNode(node, path as FastPath<ImportSyntaxNode>, options, print);
     case 'ImportedModule.Actuals':
-      return printImportedModuleActualsNode(path as FastPath<ImportedModuleActualsNode>, options, print);
+      return printImportedModuleActualsNode(node, path as FastPath<ImportedModuleActualsNode>, options, print);
     case 'ImportedModule.ActualsRenaming':
-      return printImportedModuleActualsRenamingNode(path as FastPath<ImportedModuleActualsRenamingNode>, options, print);
+      return printImportedModuleActualsRenamingNode(node, path as FastPath<ImportedModuleActualsRenamingNode>, options, print);
     case 'ImportedModule.Default':
-      return printImportedModuleDefaultNode(path as FastPath<ImportedModuleDefaultNode>, options, print);
+      return printImportedModuleDefaultNode(node, path as FastPath<ImportedModuleDefaultNode>, options, print);
     case 'ImportedModule.Renamings':
-      return printImportedModuleRenamingsNode(path as FastPath<ImportedModuleRenamingsNode>, options, print);
+      return printImportedModuleRenamingsNode(node, path as FastPath<ImportedModuleRenamingsNode>, options, print);
     case 'IntegerLiteral.DecimalIntegerLiteral':
-      return printIntegerLiteralDecimalIntegerLiteralNode(path as FastPath<IntegerLiteralDecimalIntegerLiteralNode>, options, print);
+      return printIntegerLiteralDecimalIntegerLiteralNode(node, path as FastPath<IntegerLiteralDecimalIntegerLiteralNode>, options, print);
     case 'IntegerLiteral.HexIntegerLiteral':
-      return printIntegerLiteralHexIntegerLiteralNode(path as FastPath<IntegerLiteralHexIntegerLiteralNode>, options, print);
+      return printIntegerLiteralHexIntegerLiteralNode(node, path as FastPath<IntegerLiteralHexIntegerLiteralNode>, options, print);
     case 'IntegerLiteral.OctalIntegerLiteral':
-      return printIntegerLiteralOctalIntegerLiteralNode(path as FastPath<IntegerLiteralOctalIntegerLiteralNode>, options, print);
+      return printIntegerLiteralOctalIntegerLiteralNode(node, path as FastPath<IntegerLiteralOctalIntegerLiteralNode>, options, print);
     case 'JustDate.Lexical':
-      return printJustDateLexicalNode(path as FastPath<JustDateLexicalNode>, options, print);
+      return printJustDateLexicalNode(node, path as FastPath<JustDateLexicalNode>, options, print);
     case 'JustTime.Lexical':
-      return printJustTimeLexicalNode(path as FastPath<JustTimeLexicalNode>, options, print);
+      return printJustTimeLexicalNode(node, path as FastPath<JustTimeLexicalNode>, options, print);
     case 'KeywordArgument_Expression.Default':
-      return printKeywordArgument_ExpressionDefaultNode(path as FastPath<KeywordArgument_ExpressionDefaultNode>, options, print);
+      return printKeywordArgument_ExpressionDefaultNode(node, path as FastPath<KeywordArgument_ExpressionDefaultNode>, options, print);
     case 'KeywordArguments_Expression.Default':
-      return printKeywordArguments_ExpressionDefaultNode(path as FastPath<KeywordArguments_ExpressionDefaultNode>, options, print);
+      return printKeywordArguments_ExpressionDefaultNode(node, path as FastPath<KeywordArguments_ExpressionDefaultNode>, options, print);
     case 'KeywordArguments_Expression.None':
-      return printKeywordArguments_ExpressionNoneNode(path as FastPath<KeywordArguments_ExpressionNoneNode>, options, print);
+      return printKeywordArguments_ExpressionNoneNode(node, path as FastPath<KeywordArguments_ExpressionNoneNode>, options, print);
     case 'KeywordFormal.Default':
-      return printKeywordFormalDefaultNode(path as FastPath<KeywordFormalDefaultNode>, options, print);
+      return printKeywordFormalDefaultNode(node, path as FastPath<KeywordFormalDefaultNode>, options, print);
     case 'KeywordFormals.Default':
-      return printKeywordFormalsDefaultNode(path as FastPath<KeywordFormalsDefaultNode>, options, print);
+      return printKeywordFormalsDefaultNode(node, path as FastPath<KeywordFormalsDefaultNode>, options, print);
     case 'KeywordFormals.None':
-      return printKeywordFormalsNoneNode(path as FastPath<KeywordFormalsNoneNode>, options, print);
+      return printKeywordFormalsNoneNode(node, path as FastPath<KeywordFormalsNoneNode>, options, print);
     case 'Kind.Alias':
-      return printKindAliasNode(path as FastPath<KindAliasNode>, options, print);
+      return printKindAliasNode(node, path as FastPath<KindAliasNode>, options, print);
     case 'Kind.All':
-      return printKindAllNode(path as FastPath<KindAllNode>, options, print);
+      return printKindAllNode(node, path as FastPath<KindAllNode>, options, print);
     case 'Kind.Anno':
-      return printKindAnnoNode(path as FastPath<KindAnnoNode>, options, print);
+      return printKindAnnoNode(node, path as FastPath<KindAnnoNode>, options, print);
     case 'Kind.Data':
-      return printKindDataNode(path as FastPath<KindDataNode>, options, print);
+      return printKindDataNode(node, path as FastPath<KindDataNode>, options, print);
     case 'Kind.Function':
-      return printKindFunctionNode(path as FastPath<KindFunctionNode>, options, print);
+      return printKindFunctionNode(node, path as FastPath<KindFunctionNode>, options, print);
     case 'Kind.Module':
-      return printKindModuleNode(path as FastPath<KindModuleNode>, options, print);
+      return printKindModuleNode(node, path as FastPath<KindModuleNode>, options, print);
     case 'Kind.Tag':
-      return printKindTagNode(path as FastPath<KindTagNode>, options, print);
+      return printKindTagNode(node, path as FastPath<KindTagNode>, options, print);
     case 'Kind.Variable':
-      return printKindVariableNode(path as FastPath<KindVariableNode>, options, print);
+      return printKindVariableNode(node, path as FastPath<KindVariableNode>, options, print);
     case 'Kind.View':
-      return printKindViewNode(path as FastPath<KindViewNode>, options, print);
+      return printKindViewNode(node, path as FastPath<KindViewNode>, options, print);
     case 'LAYOUT.Lexical':
-      return printLAYOUTLexicalNode(path as FastPath<LAYOUTLexicalNode>, options, print);
+      return printLAYOUTLexicalNode(node, path as FastPath<LAYOUTLexicalNode>, options, print);
     case 'Label.Default':
-      return printLabelDefaultNode(path as FastPath<LabelDefaultNode>, options, print);
+      return printLabelDefaultNode(node, path as FastPath<LabelDefaultNode>, options, print);
     case 'Label.Empty':
-      return printLabelEmptyNode(path as FastPath<LabelEmptyNode>, options, print);
+      return printLabelEmptyNode(node, path as FastPath<LabelEmptyNode>, options, print);
     case 'Literal.Boolean':
-      return printLiteralBooleanNode(path as FastPath<LiteralBooleanNode>, options, print);
+      return printLiteralBooleanNode(node, path as FastPath<LiteralBooleanNode>, options, print);
     case 'Literal.DateTime':
-      return printLiteralDateTimeNode(path as FastPath<LiteralDateTimeNode>, options, print);
+      return printLiteralDateTimeNode(node, path as FastPath<LiteralDateTimeNode>, options, print);
     case 'Literal.Integer':
-      return printLiteralIntegerNode(path as FastPath<LiteralIntegerNode>, options, print);
+      return printLiteralIntegerNode(node, path as FastPath<LiteralIntegerNode>, options, print);
     case 'Literal.Location':
-      return printLiteralLocationNode(path as FastPath<LiteralLocationNode>, options, print);
+      return printLiteralLocationNode(node, path as FastPath<LiteralLocationNode>, options, print);
     case 'Literal.Rational':
-      return printLiteralRationalNode(path as FastPath<LiteralRationalNode>, options, print);
+      return printLiteralRationalNode(node, path as FastPath<LiteralRationalNode>, options, print);
     case 'Literal.Real':
-      return printLiteralRealNode(path as FastPath<LiteralRealNode>, options, print);
+      return printLiteralRealNode(node, path as FastPath<LiteralRealNode>, options, print);
     case 'Literal.RegExp':
-      return printLiteralRegExpNode(path as FastPath<LiteralRegExpNode>, options, print);
+      return printLiteralRegExpNode(node, path as FastPath<LiteralRegExpNode>, options, print);
     case 'Literal.String':
-      return printLiteralStringNode(path as FastPath<LiteralStringNode>, options, print);
+      return printLiteralStringNode(node, path as FastPath<LiteralStringNode>, options, print);
     case 'LocalVariableDeclaration.Default':
-      return printLocalVariableDeclarationDefaultNode(path as FastPath<LocalVariableDeclarationDefaultNode>, options, print);
+      return printLocalVariableDeclarationDefaultNode(node, path as FastPath<LocalVariableDeclarationDefaultNode>, options, print);
     case 'LocalVariableDeclaration.Dynamic':
-      return printLocalVariableDeclarationDynamicNode(path as FastPath<LocalVariableDeclarationDynamicNode>, options, print);
+      return printLocalVariableDeclarationDynamicNode(node, path as FastPath<LocalVariableDeclarationDynamicNode>, options, print);
     case 'LocationLiteral.Default':
-      return printLocationLiteralDefaultNode(path as FastPath<LocationLiteralDefaultNode>, options, print);
+      return printLocationLiteralDefaultNode(node, path as FastPath<LocationLiteralDefaultNode>, options, print);
     case 'Mapping_Expression.Default':
-      return printMapping_ExpressionDefaultNode(path as FastPath<Mapping_ExpressionDefaultNode>, options, print);
+      return printMapping_ExpressionDefaultNode(node, path as FastPath<Mapping_ExpressionDefaultNode>, options, print);
     case 'MidPathChars.Lexical':
-      return printMidPathCharsLexicalNode(path as FastPath<MidPathCharsLexicalNode>, options, print);
+      return printMidPathCharsLexicalNode(node, path as FastPath<MidPathCharsLexicalNode>, options, print);
     case 'MidProtocolChars.Lexical':
-      return printMidProtocolCharsLexicalNode(path as FastPath<MidProtocolCharsLexicalNode>, options, print);
+      return printMidProtocolCharsLexicalNode(node, path as FastPath<MidProtocolCharsLexicalNode>, options, print);
     case 'MidStringChars.Lexical':
-      return printMidStringCharsLexicalNode(path as FastPath<MidStringCharsLexicalNode>, options, print);
+      return printMidStringCharsLexicalNode(node, path as FastPath<MidStringCharsLexicalNode>, options, print);
     case 'Module.Default':
-      return printModuleDefaultNode(path as FastPath<ModuleDefaultNode>, options, print);
+      return printModuleDefaultNode(node, path as FastPath<ModuleDefaultNode>, options, print);
     case 'ModuleActuals.Default':
-      return printModuleActualsDefaultNode(path as FastPath<ModuleActualsDefaultNode>, options, print);
+      return printModuleActualsDefaultNode(node, path as FastPath<ModuleActualsDefaultNode>, options, print);
     case 'ModuleParameters.Default':
-      return printModuleParametersDefaultNode(path as FastPath<ModuleParametersDefaultNode>, options, print);
+      return printModuleParametersDefaultNode(node, path as FastPath<ModuleParametersDefaultNode>, options, print);
     case 'Name.Lexical':
-      return printNameLexicalNode(path as FastPath<NameLexicalNode>, options, print);
+      return printNameLexicalNode(node, path as FastPath<NameLexicalNode>, options, print);
     case 'NamedBackslash.Lexical':
-      return printNamedBackslashLexicalNode(path as FastPath<NamedBackslashLexicalNode>, options, print);
+      return printNamedBackslashLexicalNode(node, path as FastPath<NamedBackslashLexicalNode>, options, print);
     case 'NamedRegExp.Lexical':
-      return printNamedRegExpLexicalNode(path as FastPath<NamedRegExpLexicalNode>, options, print);
+      return printNamedRegExpLexicalNode(node, path as FastPath<NamedRegExpLexicalNode>, options, print);
     case 'Nonterminal.Lexical':
-      return printNonterminalLexicalNode(path as FastPath<NonterminalLexicalNode>, options, print);
+      return printNonterminalLexicalNode(node, path as FastPath<NonterminalLexicalNode>, options, print);
     case 'NonterminalLabel.Lexical':
-      return printNonterminalLabelLexicalNode(path as FastPath<NonterminalLabelLexicalNode>, options, print);
+      return printNonterminalLabelLexicalNode(node, path as FastPath<NonterminalLabelLexicalNode>, options, print);
     case 'OctalIntegerLiteral.Lexical':
-      return printOctalIntegerLiteralLexicalNode(path as FastPath<OctalIntegerLiteralLexicalNode>, options, print);
+      return printOctalIntegerLiteralLexicalNode(node, path as FastPath<OctalIntegerLiteralLexicalNode>, options, print);
     case 'OptionalComma.Lexical':
-      return printOptionalCommaLexicalNode(path as FastPath<OptionalCommaLexicalNode>, options, print);
+      return printOptionalCommaLexicalNode(node, path as FastPath<OptionalCommaLexicalNode>, options, print);
     case 'OptionalExpression.Expression':
-      return printOptionalExpressionExpressionNode(path as FastPath<OptionalExpressionExpressionNode>, options, print);
+      return printOptionalExpressionExpressionNode(node, path as FastPath<OptionalExpressionExpressionNode>, options, print);
     case 'OptionalExpression.NoExpression':
-      return printOptionalExpressionNoExpressionNode(path as FastPath<OptionalExpressionNoExpressionNode>, options, print);
+      return printOptionalExpressionNoExpressionNode(node, path as FastPath<OptionalExpressionNoExpressionNode>, options, print);
     case 'Output.Lexical':
-      return printOutputLexicalNode(path as FastPath<OutputLexicalNode>, options, print);
+      return printOutputLexicalNode(node, path as FastPath<OutputLexicalNode>, options, print);
     case 'Parameters.Default':
-      return printParametersDefaultNode(path as FastPath<ParametersDefaultNode>, options, print);
+      return printParametersDefaultNode(node, path as FastPath<ParametersDefaultNode>, options, print);
     case 'Parameters.VarArgs':
-      return printParametersVarArgsNode(path as FastPath<ParametersVarArgsNode>, options, print);
+      return printParametersVarArgsNode(node, path as FastPath<ParametersVarArgsNode>, options, print);
     case 'PathChars.Lexical':
-      return printPathCharsLexicalNode(path as FastPath<PathCharsLexicalNode>, options, print);
+      return printPathCharsLexicalNode(node, path as FastPath<PathCharsLexicalNode>, options, print);
     case 'PathPart.Interpolated':
-      return printPathPartInterpolatedNode(path as FastPath<PathPartInterpolatedNode>, options, print);
+      return printPathPartInterpolatedNode(node, path as FastPath<PathPartInterpolatedNode>, options, print);
     case 'PathPart.NonInterpolated':
-      return printPathPartNonInterpolatedNode(path as FastPath<PathPartNonInterpolatedNode>, options, print);
+      return printPathPartNonInterpolatedNode(node, path as FastPath<PathPartNonInterpolatedNode>, options, print);
     case 'PathTail.Mid':
-      return printPathTailMidNode(path as FastPath<PathTailMidNode>, options, print);
+      return printPathTailMidNode(node, path as FastPath<PathTailMidNode>, options, print);
     case 'PathTail.Post':
-      return printPathTailPostNode(path as FastPath<PathTailPostNode>, options, print);
+      return printPathTailPostNode(node, path as FastPath<PathTailPostNode>, options, print);
     case 'PatternWithAction.Arbitrary':
-      return printPatternWithActionArbitraryNode(path as FastPath<PatternWithActionArbitraryNode>, options, print);
+      return printPatternWithActionArbitraryNode(node, path as FastPath<PatternWithActionArbitraryNode>, options, print);
     case 'PatternWithAction.Replacing':
-      return printPatternWithActionReplacingNode(path as FastPath<PatternWithActionReplacingNode>, options, print);
+      return printPatternWithActionReplacingNode(node, path as FastPath<PatternWithActionReplacingNode>, options, print);
     case 'PostPathChars.Lexical':
-      return printPostPathCharsLexicalNode(path as FastPath<PostPathCharsLexicalNode>, options, print);
+      return printPostPathCharsLexicalNode(node, path as FastPath<PostPathCharsLexicalNode>, options, print);
     case 'PostProtocolChars.Lexical':
-      return printPostProtocolCharsLexicalNode(path as FastPath<PostProtocolCharsLexicalNode>, options, print);
+      return printPostProtocolCharsLexicalNode(node, path as FastPath<PostProtocolCharsLexicalNode>, options, print);
     case 'PostStringChars.Lexical':
-      return printPostStringCharsLexicalNode(path as FastPath<PostStringCharsLexicalNode>, options, print);
+      return printPostStringCharsLexicalNode(node, path as FastPath<PostStringCharsLexicalNode>, options, print);
     case 'PrePathChars.Lexical':
-      return printPrePathCharsLexicalNode(path as FastPath<PrePathCharsLexicalNode>, options, print);
+      return printPrePathCharsLexicalNode(node, path as FastPath<PrePathCharsLexicalNode>, options, print);
     case 'PreProtocolChars.Lexical':
-      return printPreProtocolCharsLexicalNode(path as FastPath<PreProtocolCharsLexicalNode>, options, print);
+      return printPreProtocolCharsLexicalNode(node, path as FastPath<PreProtocolCharsLexicalNode>, options, print);
     case 'PreStringChars.Lexical':
-      return printPreStringCharsLexicalNode(path as FastPath<PreStringCharsLexicalNode>, options, print);
+      return printPreStringCharsLexicalNode(node, path as FastPath<PreStringCharsLexicalNode>, options, print);
     case 'Prod.All':
-      return printProdAllNode(path as FastPath<ProdAllNode>, options, print);
+      return printProdAllNode(node, path as FastPath<ProdAllNode>, options, print);
     case 'Prod.AssociativityGroup':
-      return printProdAssociativityGroupNode(path as FastPath<ProdAssociativityGroupNode>, options, print);
+      return printProdAssociativityGroupNode(node, path as FastPath<ProdAssociativityGroupNode>, options, print);
     case 'Prod.First':
-      return printProdFirstNode(path as FastPath<ProdFirstNode>, options, print);
+      return printProdFirstNode(node, path as FastPath<ProdFirstNode>, options, print);
     case 'Prod.Labeled':
-      return printProdLabeledNode(path as FastPath<ProdLabeledNode>, options, print);
+      return printProdLabeledNode(node, path as FastPath<ProdLabeledNode>, options, print);
     case 'Prod.Reference':
-      return printProdReferenceNode(path as FastPath<ProdReferenceNode>, options, print);
+      return printProdReferenceNode(node, path as FastPath<ProdReferenceNode>, options, print);
     case 'Prod.Unlabeled':
-      return printProdUnlabeledNode(path as FastPath<ProdUnlabeledNode>, options, print);
+      return printProdUnlabeledNode(node, path as FastPath<ProdUnlabeledNode>, options, print);
     case 'ProdModifier.Associativity':
-      return printProdModifierAssociativityNode(path as FastPath<ProdModifierAssociativityNode>, options, print);
+      return printProdModifierAssociativityNode(node, path as FastPath<ProdModifierAssociativityNode>, options, print);
     case 'ProdModifier.Bracket':
-      return printProdModifierBracketNode(path as FastPath<ProdModifierBracketNode>, options, print);
+      return printProdModifierBracketNode(node, path as FastPath<ProdModifierBracketNode>, options, print);
     case 'ProdModifier.Tag':
-      return printProdModifierTagNode(path as FastPath<ProdModifierTagNode>, options, print);
+      return printProdModifierTagNode(node, path as FastPath<ProdModifierTagNode>, options, print);
     case 'ProtocolChars.Lexical':
-      return printProtocolCharsLexicalNode(path as FastPath<ProtocolCharsLexicalNode>, options, print);
+      return printProtocolCharsLexicalNode(node, path as FastPath<ProtocolCharsLexicalNode>, options, print);
     case 'ProtocolPart.Interpolated':
-      return printProtocolPartInterpolatedNode(path as FastPath<ProtocolPartInterpolatedNode>, options, print);
+      return printProtocolPartInterpolatedNode(node, path as FastPath<ProtocolPartInterpolatedNode>, options, print);
     case 'ProtocolPart.NonInterpolated':
-      return printProtocolPartNonInterpolatedNode(path as FastPath<ProtocolPartNonInterpolatedNode>, options, print);
+      return printProtocolPartNonInterpolatedNode(node, path as FastPath<ProtocolPartNonInterpolatedNode>, options, print);
     case 'ProtocolTail.Mid':
-      return printProtocolTailMidNode(path as FastPath<ProtocolTailMidNode>, options, print);
+      return printProtocolTailMidNode(node, path as FastPath<ProtocolTailMidNode>, options, print);
     case 'ProtocolTail.Post':
-      return printProtocolTailPostNode(path as FastPath<ProtocolTailPostNode>, options, print);
+      return printProtocolTailPostNode(node, path as FastPath<ProtocolTailPostNode>, options, print);
     case 'QualifiedName.Default':
-      return printQualifiedNameDefaultNode(path as FastPath<QualifiedNameDefaultNode>, options, print);
+      return printQualifiedNameDefaultNode(node, path as FastPath<QualifiedNameDefaultNode>, options, print);
     case 'Range.Character':
-      return printRangeCharacterNode(path as FastPath<RangeCharacterNode>, options, print);
+      return printRangeCharacterNode(node, path as FastPath<RangeCharacterNode>, options, print);
     case 'Range.FromTo':
-      return printRangeFromToNode(path as FastPath<RangeFromToNode>, options, print);
+      return printRangeFromToNode(node, path as FastPath<RangeFromToNode>, options, print);
     case 'RationalLiteral.Lexical':
-      return printRationalLiteralLexicalNode(path as FastPath<RationalLiteralLexicalNode>, options, print);
+      return printRationalLiteralLexicalNode(node, path as FastPath<RationalLiteralLexicalNode>, options, print);
     case 'RealLiteral.Lexical':
-      return printRealLiteralLexicalNode(path as FastPath<RealLiteralLexicalNode>, options, print);
+      return printRealLiteralLexicalNode(node, path as FastPath<RealLiteralLexicalNode>, options, print);
     case 'RegExp.Lexical':
-      return printRegExpLexicalNode(path as FastPath<RegExpLexicalNode>, options, print);
+      return printRegExpLexicalNode(node, path as FastPath<RegExpLexicalNode>, options, print);
     case 'RegExpLiteral.Lexical':
-      return printRegExpLiteralLexicalNode(path as FastPath<RegExpLiteralLexicalNode>, options, print);
+      return printRegExpLiteralLexicalNode(node, path as FastPath<RegExpLiteralLexicalNode>, options, print);
     case 'RegExpModifier.Lexical':
-      return printRegExpModifierLexicalNode(path as FastPath<RegExpModifierLexicalNode>, options, print);
+      return printRegExpModifierLexicalNode(node, path as FastPath<RegExpModifierLexicalNode>, options, print);
     case 'Renaming.Default':
-      return printRenamingDefaultNode(path as FastPath<RenamingDefaultNode>, options, print);
+      return printRenamingDefaultNode(node, path as FastPath<RenamingDefaultNode>, options, print);
     case 'Renamings.Default':
-      return printRenamingsDefaultNode(path as FastPath<RenamingsDefaultNode>, options, print);
+      return printRenamingsDefaultNode(node, path as FastPath<RenamingsDefaultNode>, options, print);
     case 'Replacement.Conditional':
-      return printReplacementConditionalNode(path as FastPath<ReplacementConditionalNode>, options, print);
+      return printReplacementConditionalNode(node, path as FastPath<ReplacementConditionalNode>, options, print);
     case 'Replacement.Unconditional':
-      return printReplacementUnconditionalNode(path as FastPath<ReplacementUnconditionalNode>, options, print);
+      return printReplacementUnconditionalNode(node, path as FastPath<ReplacementUnconditionalNode>, options, print);
     case 'ShellCommand.Clear':
-      return printShellCommandClearNode(path as FastPath<ShellCommandClearNode>, options, print);
+      return printShellCommandClearNode(node, path as FastPath<ShellCommandClearNode>, options, print);
     case 'ShellCommand.Edit':
-      return printShellCommandEditNode(path as FastPath<ShellCommandEditNode>, options, print);
+      return printShellCommandEditNode(node, path as FastPath<ShellCommandEditNode>, options, print);
     case 'ShellCommand.Help':
-      return printShellCommandHelpNode(path as FastPath<ShellCommandHelpNode>, options, print);
+      return printShellCommandHelpNode(node, path as FastPath<ShellCommandHelpNode>, options, print);
     case 'ShellCommand.History':
-      return printShellCommandHistoryNode(path as FastPath<ShellCommandHistoryNode>, options, print);
+      return printShellCommandHistoryNode(node, path as FastPath<ShellCommandHistoryNode>, options, print);
     case 'ShellCommand.ListDeclarations':
-      return printShellCommandListDeclarationsNode(path as FastPath<ShellCommandListDeclarationsNode>, options, print);
+      return printShellCommandListDeclarationsNode(node, path as FastPath<ShellCommandListDeclarationsNode>, options, print);
     case 'ShellCommand.ListModules':
-      return printShellCommandListModulesNode(path as FastPath<ShellCommandListModulesNode>, options, print);
+      return printShellCommandListModulesNode(node, path as FastPath<ShellCommandListModulesNode>, options, print);
     case 'ShellCommand.Quit':
-      return printShellCommandQuitNode(path as FastPath<ShellCommandQuitNode>, options, print);
+      return printShellCommandQuitNode(node, path as FastPath<ShellCommandQuitNode>, options, print);
     case 'ShellCommand.SetOption':
-      return printShellCommandSetOptionNode(path as FastPath<ShellCommandSetOptionNode>, options, print);
+      return printShellCommandSetOptionNode(node, path as FastPath<ShellCommandSetOptionNode>, options, print);
     case 'ShellCommand.Test':
-      return printShellCommandTestNode(path as FastPath<ShellCommandTestNode>, options, print);
+      return printShellCommandTestNode(node, path as FastPath<ShellCommandTestNode>, options, print);
     case 'ShellCommand.Undeclare':
-      return printShellCommandUndeclareNode(path as FastPath<ShellCommandUndeclareNode>, options, print);
+      return printShellCommandUndeclareNode(node, path as FastPath<ShellCommandUndeclareNode>, options, print);
     case 'ShellCommand.Unimport':
-      return printShellCommandUnimportNode(path as FastPath<ShellCommandUnimportNode>, options, print);
+      return printShellCommandUnimportNode(node, path as FastPath<ShellCommandUnimportNode>, options, print);
     case 'Signature.NoThrows':
-      return printSignatureNoThrowsNode(path as FastPath<SignatureNoThrowsNode>, options, print);
+      return printSignatureNoThrowsNode(node, path as FastPath<SignatureNoThrowsNode>, options, print);
     case 'Signature.WithThrows':
-      return printSignatureWithThrowsNode(path as FastPath<SignatureWithThrowsNode>, options, print);
+      return printSignatureWithThrowsNode(node, path as FastPath<SignatureWithThrowsNode>, options, print);
     case 'Start.Absent':
-      return printStartAbsentNode(path as FastPath<StartAbsentNode>, options, print);
+      return printStartAbsentNode(node, path as FastPath<StartAbsentNode>, options, print);
     case 'Start.Present':
-      return printStartPresentNode(path as FastPath<StartPresentNode>, options, print);
+      return printStartPresentNode(node, path as FastPath<StartPresentNode>, options, print);
     case 'Statement.Append':
-      return printStatementAppendNode(path as FastPath<StatementAppendNode>, options, print);
+      return printStatementAppendNode(node, path as FastPath<StatementAppendNode>, options, print);
     case 'Statement.Assert':
-      return printStatementAssertNode(path as FastPath<StatementAssertNode>, options, print);
+      return printStatementAssertNode(node, path as FastPath<StatementAssertNode>, options, print);
     case 'Statement.AssertWithMessage':
-      return printStatementAssertWithMessageNode(path as FastPath<StatementAssertWithMessageNode>, options, print);
+      return printStatementAssertWithMessageNode(node, path as FastPath<StatementAssertWithMessageNode>, options, print);
     case 'Statement.Assignment':
-      return printStatementAssignmentNode(path as FastPath<StatementAssignmentNode>, options, print);
+      return printStatementAssignmentNode(node, path as FastPath<StatementAssignmentNode>, options, print);
     case 'Statement.Break':
-      return printStatementBreakNode(path as FastPath<StatementBreakNode>, options, print);
+      return printStatementBreakNode(node, path as FastPath<StatementBreakNode>, options, print);
     case 'Statement.Continue':
-      return printStatementContinueNode(path as FastPath<StatementContinueNode>, options, print);
+      return printStatementContinueNode(node, path as FastPath<StatementContinueNode>, options, print);
     case 'Statement.DoWhile':
-      return printStatementDoWhileNode(path as FastPath<StatementDoWhileNode>, options, print);
+      return printStatementDoWhileNode(node, path as FastPath<StatementDoWhileNode>, options, print);
     case 'Statement.EmptyStatement':
-      return printStatementEmptyStatementNode(path as FastPath<StatementEmptyStatementNode>, options, print);
+      return printStatementEmptyStatementNode(node, path as FastPath<StatementEmptyStatementNode>, options, print);
     case 'Statement.Expression':
-      return printStatementExpressionNode(path as FastPath<StatementExpressionNode>, options, print);
+      return printStatementExpressionNode(node, path as FastPath<StatementExpressionNode>, options, print);
     case 'Statement.Fail':
-      return printStatementFailNode(path as FastPath<StatementFailNode>, options, print);
+      return printStatementFailNode(node, path as FastPath<StatementFailNode>, options, print);
     case 'Statement.Filter':
-      return printStatementFilterNode(path as FastPath<StatementFilterNode>, options, print);
+      return printStatementFilterNode(node, path as FastPath<StatementFilterNode>, options, print);
     case 'Statement.For':
-      return printStatementForNode(path as FastPath<StatementForNode>, options, print);
+      return printStatementForNode(node, path as FastPath<StatementForNode>, options, print);
     case 'Statement.FunctionDeclaration':
-      return printStatementFunctionDeclarationNode(path as FastPath<StatementFunctionDeclarationNode>, options, print);
+      return printStatementFunctionDeclarationNode(node, path as FastPath<StatementFunctionDeclarationNode>, options, print);
     case 'Statement.GlobalDirective':
-      return printStatementGlobalDirectiveNode(path as FastPath<StatementGlobalDirectiveNode>, options, print);
+      return printStatementGlobalDirectiveNode(node, path as FastPath<StatementGlobalDirectiveNode>, options, print);
     case 'Statement.IfThen':
-      return printStatementIfThenNode(path as FastPath<StatementIfThenNode>, options, print);
+      return printStatementIfThenNode(node, path as FastPath<StatementIfThenNode>, options, print);
     case 'Statement.IfThenElse':
-      return printStatementIfThenElseNode(path as FastPath<StatementIfThenElseNode>, options, print);
+      return printStatementIfThenElseNode(node, path as FastPath<StatementIfThenElseNode>, options, print);
     case 'Statement.Insert':
-      return printStatementInsertNode(path as FastPath<StatementInsertNode>, options, print);
+      return printStatementInsertNode(node, path as FastPath<StatementInsertNode>, options, print);
     case 'Statement.NonEmptyBlock':
-      return printStatementNonEmptyBlockNode(path as FastPath<StatementNonEmptyBlockNode>, options, print);
+      return printStatementNonEmptyBlockNode(node, path as FastPath<StatementNonEmptyBlockNode>, options, print);
     case 'Statement.Return':
-      return printStatementReturnNode(path as FastPath<StatementReturnNode>, options, print);
+      return printStatementReturnNode(node, path as FastPath<StatementReturnNode>, options, print);
     case 'Statement.Solve':
-      return printStatementSolveNode(path as FastPath<StatementSolveNode>, options, print);
+      return printStatementSolveNode(node, path as FastPath<StatementSolveNode>, options, print);
     case 'Statement.Switch':
-      return printStatementSwitchNode(path as FastPath<StatementSwitchNode>, options, print);
+      return printStatementSwitchNode(node, path as FastPath<StatementSwitchNode>, options, print);
     case 'Statement.Throw':
-      return printStatementThrowNode(path as FastPath<StatementThrowNode>, options, print);
+      return printStatementThrowNode(node, path as FastPath<StatementThrowNode>, options, print);
     case 'Statement.Try':
-      return printStatementTryNode(path as FastPath<StatementTryNode>, options, print);
+      return printStatementTryNode(node, path as FastPath<StatementTryNode>, options, print);
     case 'Statement.TryFinally':
-      return printStatementTryFinallyNode(path as FastPath<StatementTryFinallyNode>, options, print);
+      return printStatementTryFinallyNode(node, path as FastPath<StatementTryFinallyNode>, options, print);
     case 'Statement.VariableDeclaration':
-      return printStatementVariableDeclarationNode(path as FastPath<StatementVariableDeclarationNode>, options, print);
+      return printStatementVariableDeclarationNode(node, path as FastPath<StatementVariableDeclarationNode>, options, print);
     case 'Statement.Visit':
-      return printStatementVisitNode(path as FastPath<StatementVisitNode>, options, print);
+      return printStatementVisitNode(node, path as FastPath<StatementVisitNode>, options, print);
     case 'Statement.While':
-      return printStatementWhileNode(path as FastPath<StatementWhileNode>, options, print);
+      return printStatementWhileNode(node, path as FastPath<StatementWhileNode>, options, print);
     case 'Strategy.BottomUp':
-      return printStrategyBottomUpNode(path as FastPath<StrategyBottomUpNode>, options, print);
+      return printStrategyBottomUpNode(node, path as FastPath<StrategyBottomUpNode>, options, print);
     case 'Strategy.BottomUpBreak':
-      return printStrategyBottomUpBreakNode(path as FastPath<StrategyBottomUpBreakNode>, options, print);
+      return printStrategyBottomUpBreakNode(node, path as FastPath<StrategyBottomUpBreakNode>, options, print);
     case 'Strategy.Innermost':
-      return printStrategyInnermostNode(path as FastPath<StrategyInnermostNode>, options, print);
+      return printStrategyInnermostNode(node, path as FastPath<StrategyInnermostNode>, options, print);
     case 'Strategy.Outermost':
-      return printStrategyOutermostNode(path as FastPath<StrategyOutermostNode>, options, print);
+      return printStrategyOutermostNode(node, path as FastPath<StrategyOutermostNode>, options, print);
     case 'Strategy.TopDown':
-      return printStrategyTopDownNode(path as FastPath<StrategyTopDownNode>, options, print);
+      return printStrategyTopDownNode(node, path as FastPath<StrategyTopDownNode>, options, print);
     case 'Strategy.TopDownBreak':
-      return printStrategyTopDownBreakNode(path as FastPath<StrategyTopDownBreakNode>, options, print);
+      return printStrategyTopDownBreakNode(node, path as FastPath<StrategyTopDownBreakNode>, options, print);
     case 'StringCharacter.Lexical':
-      return printStringCharacterLexicalNode(path as FastPath<StringCharacterLexicalNode>, options, print);
+      return printStringCharacterLexicalNode(node, path as FastPath<StringCharacterLexicalNode>, options, print);
     case 'StringConstant.Lexical':
-      return printStringConstantLexicalNode(path as FastPath<StringConstantLexicalNode>, options, print);
+      return printStringConstantLexicalNode(node, path as FastPath<StringConstantLexicalNode>, options, print);
     case 'StringLiteral.Interpolated':
-      return printStringLiteralInterpolatedNode(path as FastPath<StringLiteralInterpolatedNode>, options, print);
+      return printStringLiteralInterpolatedNode(node, path as FastPath<StringLiteralInterpolatedNode>, options, print);
     case 'StringLiteral.NonInterpolated':
-      return printStringLiteralNonInterpolatedNode(path as FastPath<StringLiteralNonInterpolatedNode>, options, print);
+      return printStringLiteralNonInterpolatedNode(node, path as FastPath<StringLiteralNonInterpolatedNode>, options, print);
     case 'StringLiteral.Template':
-      return printStringLiteralTemplateNode(path as FastPath<StringLiteralTemplateNode>, options, print);
+      return printStringLiteralTemplateNode(node, path as FastPath<StringLiteralTemplateNode>, options, print);
     case 'StringMiddle.Interpolated':
-      return printStringMiddleInterpolatedNode(path as FastPath<StringMiddleInterpolatedNode>, options, print);
+      return printStringMiddleInterpolatedNode(node, path as FastPath<StringMiddleInterpolatedNode>, options, print);
     case 'StringMiddle.Mid':
-      return printStringMiddleMidNode(path as FastPath<StringMiddleMidNode>, options, print);
+      return printStringMiddleMidNode(node, path as FastPath<StringMiddleMidNode>, options, print);
     case 'StringMiddle.Template':
-      return printStringMiddleTemplateNode(path as FastPath<StringMiddleTemplateNode>, options, print);
+      return printStringMiddleTemplateNode(node, path as FastPath<StringMiddleTemplateNode>, options, print);
     case 'StringTail.MidInterpolated':
-      return printStringTailMidInterpolatedNode(path as FastPath<StringTailMidInterpolatedNode>, options, print);
+      return printStringTailMidInterpolatedNode(node, path as FastPath<StringTailMidInterpolatedNode>, options, print);
     case 'StringTail.MidTemplate':
-      return printStringTailMidTemplateNode(path as FastPath<StringTailMidTemplateNode>, options, print);
+      return printStringTailMidTemplateNode(node, path as FastPath<StringTailMidTemplateNode>, options, print);
     case 'StringTail.Post':
-      return printStringTailPostNode(path as FastPath<StringTailPostNode>, options, print);
+      return printStringTailPostNode(node, path as FastPath<StringTailPostNode>, options, print);
     case 'StringTemplate.DoWhile':
-      return printStringTemplateDoWhileNode(path as FastPath<StringTemplateDoWhileNode>, options, print);
+      return printStringTemplateDoWhileNode(node, path as FastPath<StringTemplateDoWhileNode>, options, print);
     case 'StringTemplate.For':
-      return printStringTemplateForNode(path as FastPath<StringTemplateForNode>, options, print);
+      return printStringTemplateForNode(node, path as FastPath<StringTemplateForNode>, options, print);
     case 'StringTemplate.IfThen':
-      return printStringTemplateIfThenNode(path as FastPath<StringTemplateIfThenNode>, options, print);
+      return printStringTemplateIfThenNode(node, path as FastPath<StringTemplateIfThenNode>, options, print);
     case 'StringTemplate.IfThenElse':
-      return printStringTemplateIfThenElseNode(path as FastPath<StringTemplateIfThenElseNode>, options, print);
+      return printStringTemplateIfThenElseNode(node, path as FastPath<StringTemplateIfThenElseNode>, options, print);
     case 'StringTemplate.While':
-      return printStringTemplateWhileNode(path as FastPath<StringTemplateWhileNode>, options, print);
+      return printStringTemplateWhileNode(node, path as FastPath<StringTemplateWhileNode>, options, print);
     case 'StructuredType.Default':
-      return printStructuredTypeDefaultNode(path as FastPath<StructuredTypeDefaultNode>, options, print);
+      return printStructuredTypeDefaultNode(node, path as FastPath<StructuredTypeDefaultNode>, options, print);
     case 'Sym.Alternative':
-      return printSymAlternativeNode(path as FastPath<SymAlternativeNode>, options, print);
+      return printSymAlternativeNode(node, path as FastPath<SymAlternativeNode>, options, print);
     case 'Sym.CaseInsensitiveLiteral':
-      return printSymCaseInsensitiveLiteralNode(path as FastPath<SymCaseInsensitiveLiteralNode>, options, print);
+      return printSymCaseInsensitiveLiteralNode(node, path as FastPath<SymCaseInsensitiveLiteralNode>, options, print);
     case 'Sym.CharacterClass':
-      return printSymCharacterClassNode(path as FastPath<SymCharacterClassNode>, options, print);
+      return printSymCharacterClassNode(node, path as FastPath<SymCharacterClassNode>, options, print);
     case 'Sym.Column':
-      return printSymColumnNode(path as FastPath<SymColumnNode>, options, print);
+      return printSymColumnNode(node, path as FastPath<SymColumnNode>, options, print);
     case 'Sym.Empty':
-      return printSymEmptyNode(path as FastPath<SymEmptyNode>, options, print);
+      return printSymEmptyNode(node, path as FastPath<SymEmptyNode>, options, print);
     case 'Sym.EndOfLine':
-      return printSymEndOfLineNode(path as FastPath<SymEndOfLineNode>, options, print);
+      return printSymEndOfLineNode(node, path as FastPath<SymEndOfLineNode>, options, print);
     case 'Sym.Except':
-      return printSymExceptNode(path as FastPath<SymExceptNode>, options, print);
+      return printSymExceptNode(node, path as FastPath<SymExceptNode>, options, print);
     case 'Sym.Follow':
-      return printSymFollowNode(path as FastPath<SymFollowNode>, options, print);
+      return printSymFollowNode(node, path as FastPath<SymFollowNode>, options, print);
     case 'Sym.Iter':
-      return printSymIterNode(path as FastPath<SymIterNode>, options, print);
+      return printSymIterNode(node, path as FastPath<SymIterNode>, options, print);
     case 'Sym.IterSep':
-      return printSymIterSepNode(path as FastPath<SymIterSepNode>, options, print);
+      return printSymIterSepNode(node, path as FastPath<SymIterSepNode>, options, print);
     case 'Sym.IterStar':
-      return printSymIterStarNode(path as FastPath<SymIterStarNode>, options, print);
+      return printSymIterStarNode(node, path as FastPath<SymIterStarNode>, options, print);
     case 'Sym.IterStarSep':
-      return printSymIterStarSepNode(path as FastPath<SymIterStarSepNode>, options, print);
+      return printSymIterStarSepNode(node, path as FastPath<SymIterStarSepNode>, options, print);
     case 'Sym.Labeled':
-      return printSymLabeledNode(path as FastPath<SymLabeledNode>, options, print);
+      return printSymLabeledNode(node, path as FastPath<SymLabeledNode>, options, print);
     case 'Sym.Literal':
-      return printSymLiteralNode(path as FastPath<SymLiteralNode>, options, print);
+      return printSymLiteralNode(node, path as FastPath<SymLiteralNode>, options, print);
     case 'Sym.Nonterminal':
-      return printSymNonterminalNode(path as FastPath<SymNonterminalNode>, options, print);
+      return printSymNonterminalNode(node, path as FastPath<SymNonterminalNode>, options, print);
     case 'Sym.NotFollow':
-      return printSymNotFollowNode(path as FastPath<SymNotFollowNode>, options, print);
+      return printSymNotFollowNode(node, path as FastPath<SymNotFollowNode>, options, print);
     case 'Sym.NotPrecede':
-      return printSymNotPrecedeNode(path as FastPath<SymNotPrecedeNode>, options, print);
+      return printSymNotPrecedeNode(node, path as FastPath<SymNotPrecedeNode>, options, print);
     case 'Sym.Optional':
-      return printSymOptionalNode(path as FastPath<SymOptionalNode>, options, print);
+      return printSymOptionalNode(node, path as FastPath<SymOptionalNode>, options, print);
     case 'Sym.Parameter':
-      return printSymParameterNode(path as FastPath<SymParameterNode>, options, print);
+      return printSymParameterNode(node, path as FastPath<SymParameterNode>, options, print);
     case 'Sym.Parametrized':
-      return printSymParametrizedNode(path as FastPath<SymParametrizedNode>, options, print);
+      return printSymParametrizedNode(node, path as FastPath<SymParametrizedNode>, options, print);
     case 'Sym.Precede':
-      return printSymPrecedeNode(path as FastPath<SymPrecedeNode>, options, print);
+      return printSymPrecedeNode(node, path as FastPath<SymPrecedeNode>, options, print);
     case 'Sym.Sequence':
-      return printSymSequenceNode(path as FastPath<SymSequenceNode>, options, print);
+      return printSymSequenceNode(node, path as FastPath<SymSequenceNode>, options, print);
     case 'Sym.Start':
-      return printSymStartNode(path as FastPath<SymStartNode>, options, print);
+      return printSymStartNode(node, path as FastPath<SymStartNode>, options, print);
     case 'Sym.StartOfLine':
-      return printSymStartOfLineNode(path as FastPath<SymStartOfLineNode>, options, print);
+      return printSymStartOfLineNode(node, path as FastPath<SymStartOfLineNode>, options, print);
     case 'Sym.Unequal':
-      return printSymUnequalNode(path as FastPath<SymUnequalNode>, options, print);
+      return printSymUnequalNode(node, path as FastPath<SymUnequalNode>, options, print);
     case 'SyntaxDefinition.Keyword':
-      return printSyntaxDefinitionKeywordNode(path as FastPath<SyntaxDefinitionKeywordNode>, options, print);
+      return printSyntaxDefinitionKeywordNode(node, path as FastPath<SyntaxDefinitionKeywordNode>, options, print);
     case 'SyntaxDefinition.Language':
-      return printSyntaxDefinitionLanguageNode(path as FastPath<SyntaxDefinitionLanguageNode>, options, print);
+      return printSyntaxDefinitionLanguageNode(node, path as FastPath<SyntaxDefinitionLanguageNode>, options, print);
     case 'SyntaxDefinition.Layout':
-      return printSyntaxDefinitionLayoutNode(path as FastPath<SyntaxDefinitionLayoutNode>, options, print);
+      return printSyntaxDefinitionLayoutNode(node, path as FastPath<SyntaxDefinitionLayoutNode>, options, print);
     case 'SyntaxDefinition.Lexical':
-      return printSyntaxDefinitionLexicalNode(path as FastPath<SyntaxDefinitionLexicalNode>, options, print);
+      return printSyntaxDefinitionLexicalNode(node, path as FastPath<SyntaxDefinitionLexicalNode>, options, print);
     case 'Tag.Default':
-      return printTagDefaultNode(path as FastPath<TagDefaultNode>, options, print);
+      return printTagDefaultNode(node, path as FastPath<TagDefaultNode>, options, print);
     case 'Tag.Empty':
-      return printTagEmptyNode(path as FastPath<TagEmptyNode>, options, print);
+      return printTagEmptyNode(node, path as FastPath<TagEmptyNode>, options, print);
     case 'Tag.Expression':
-      return printTagExpressionNode(path as FastPath<TagExpressionNode>, options, print);
+      return printTagExpressionNode(node, path as FastPath<TagExpressionNode>, options, print);
     case 'TagString.Lexical':
-      return printTagStringLexicalNode(path as FastPath<TagStringLexicalNode>, options, print);
+      return printTagStringLexicalNode(node, path as FastPath<TagStringLexicalNode>, options, print);
     case 'Tags.Default':
-      return printTagsDefaultNode(path as FastPath<TagsDefaultNode>, options, print);
+      return printTagsDefaultNode(node, path as FastPath<TagsDefaultNode>, options, print);
     case 'Target.Empty':
-      return printTargetEmptyNode(path as FastPath<TargetEmptyNode>, options, print);
+      return printTargetEmptyNode(node, path as FastPath<TargetEmptyNode>, options, print);
     case 'Target.Labeled':
-      return printTargetLabeledNode(path as FastPath<TargetLabeledNode>, options, print);
+      return printTargetLabeledNode(node, path as FastPath<TargetLabeledNode>, options, print);
     case 'TimePartNoTZ.Lexical':
-      return printTimePartNoTZLexicalNode(path as FastPath<TimePartNoTZLexicalNode>, options, print);
+      return printTimePartNoTZLexicalNode(node, path as FastPath<TimePartNoTZLexicalNode>, options, print);
     case 'TimeZonePart.Lexical':
-      return printTimeZonePartLexicalNode(path as FastPath<TimeZonePartLexicalNode>, options, print);
+      return printTimeZonePartLexicalNode(node, path as FastPath<TimeZonePartLexicalNode>, options, print);
     case 'Toplevel.GivenVisibility':
-      return printToplevelGivenVisibilityNode(path as FastPath<ToplevelGivenVisibilityNode>, options, print);
+      return printToplevelGivenVisibilityNode(node, path as FastPath<ToplevelGivenVisibilityNode>, options, print);
     case 'Type.Basic':
-      return printTypeBasicNode(path as FastPath<TypeBasicNode>, options, print);
+      return printTypeBasicNode(node, path as FastPath<TypeBasicNode>, options, print);
     case 'Type.Bracket':
-      return printTypeBracketNode(path as FastPath<TypeBracketNode>, options, print);
+      return printTypeBracketNode(node, path as FastPath<TypeBracketNode>, options, print);
     case 'Type.Function':
-      return printTypeFunctionNode(path as FastPath<TypeFunctionNode>, options, print);
+      return printTypeFunctionNode(node, path as FastPath<TypeFunctionNode>, options, print);
     case 'Type.Selector':
-      return printTypeSelectorNode(path as FastPath<TypeSelectorNode>, options, print);
+      return printTypeSelectorNode(node, path as FastPath<TypeSelectorNode>, options, print);
     case 'Type.Structured':
-      return printTypeStructuredNode(path as FastPath<TypeStructuredNode>, options, print);
+      return printTypeStructuredNode(node, path as FastPath<TypeStructuredNode>, options, print);
     case 'Type.Symbol':
-      return printTypeSymbolNode(path as FastPath<TypeSymbolNode>, options, print);
+      return printTypeSymbolNode(node, path as FastPath<TypeSymbolNode>, options, print);
     case 'Type.User':
-      return printTypeUserNode(path as FastPath<TypeUserNode>, options, print);
+      return printTypeUserNode(node, path as FastPath<TypeUserNode>, options, print);
     case 'Type.Variable':
-      return printTypeVariableNode(path as FastPath<TypeVariableNode>, options, print);
+      return printTypeVariableNode(node, path as FastPath<TypeVariableNode>, options, print);
     case 'TypeArg.Default':
-      return printTypeArgDefaultNode(path as FastPath<TypeArgDefaultNode>, options, print);
+      return printTypeArgDefaultNode(node, path as FastPath<TypeArgDefaultNode>, options, print);
     case 'TypeArg.Named':
-      return printTypeArgNamedNode(path as FastPath<TypeArgNamedNode>, options, print);
+      return printTypeArgNamedNode(node, path as FastPath<TypeArgNamedNode>, options, print);
     case 'TypeVar.Bounded':
-      return printTypeVarBoundedNode(path as FastPath<TypeVarBoundedNode>, options, print);
+      return printTypeVarBoundedNode(node, path as FastPath<TypeVarBoundedNode>, options, print);
     case 'TypeVar.Free':
-      return printTypeVarFreeNode(path as FastPath<TypeVarFreeNode>, options, print);
+      return printTypeVarFreeNode(node, path as FastPath<TypeVarFreeNode>, options, print);
     case 'URLChars.Lexical':
-      return printURLCharsLexicalNode(path as FastPath<URLCharsLexicalNode>, options, print);
+      return printURLCharsLexicalNode(node, path as FastPath<URLCharsLexicalNode>, options, print);
     case 'UnicodeEscape.Lexical':
-      return printUnicodeEscapeLexicalNode(path as FastPath<UnicodeEscapeLexicalNode>, options, print);
+      return printUnicodeEscapeLexicalNode(node, path as FastPath<UnicodeEscapeLexicalNode>, options, print);
     case 'UserType.Name':
-      return printUserTypeNameNode(path as FastPath<UserTypeNameNode>, options, print);
+      return printUserTypeNameNode(node, path as FastPath<UserTypeNameNode>, options, print);
     case 'UserType.Parametric':
-      return printUserTypeParametricNode(path as FastPath<UserTypeParametricNode>, options, print);
+      return printUserTypeParametricNode(node, path as FastPath<UserTypeParametricNode>, options, print);
     case 'Variable.Initialized':
-      return printVariableInitializedNode(path as FastPath<VariableInitializedNode>, options, print);
+      return printVariableInitializedNode(node, path as FastPath<VariableInitializedNode>, options, print);
     case 'Variable.UnInitialized':
-      return printVariableUnInitializedNode(path as FastPath<VariableUnInitializedNode>, options, print);
+      return printVariableUnInitializedNode(node, path as FastPath<VariableUnInitializedNode>, options, print);
     case 'Variant.NAryConstructor':
-      return printVariantNAryConstructorNode(path as FastPath<VariantNAryConstructorNode>, options, print);
+      return printVariantNAryConstructorNode(node, path as FastPath<VariantNAryConstructorNode>, options, print);
     case 'Visibility.Default':
-      return printVisibilityDefaultNode(path as FastPath<VisibilityDefaultNode>, options, print);
+      return printVisibilityDefaultNode(node, path as FastPath<VisibilityDefaultNode>, options, print);
     case 'Visibility.Private':
-      return printVisibilityPrivateNode(path as FastPath<VisibilityPrivateNode>, options, print);
+      return printVisibilityPrivateNode(node, path as FastPath<VisibilityPrivateNode>, options, print);
     case 'Visibility.Public':
-      return printVisibilityPublicNode(path as FastPath<VisibilityPublicNode>, options, print);
+      return printVisibilityPublicNode(node, path as FastPath<VisibilityPublicNode>, options, print);
     case 'Visit.DefaultStrategy':
-      return printVisitDefaultStrategyNode(path as FastPath<VisitDefaultStrategyNode>, options, print);
+      return printVisitDefaultStrategyNode(node, path as FastPath<VisitDefaultStrategyNode>, options, print);
     case 'Visit.GivenStrategy':
-      return printVisitGivenStrategyNode(path as FastPath<VisitGivenStrategyNode>, options, print);
+      return printVisitGivenStrategyNode(node, path as FastPath<VisitGivenStrategyNode>, options, print);
   }
 }

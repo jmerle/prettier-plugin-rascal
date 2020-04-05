@@ -18,13 +18,15 @@ lines.push('');
 lines.push(
   'export function print(path: FastPath<ASTNode>, options: ParserOptions, print: (path: FastPath<ASTNode>) => Doc): Doc {',
 );
-lines.push('  switch (path.getValue()._type) {');
+lines.push('const node = path.getValue();');
+lines.push('');
+lines.push('  switch (node._type) {');
 
 for (const parentType in types) {
   for (const subType in types[parentType]) {
     lines.push(`    case '${parentType}.${subType}':`);
     lines.push(
-      `      return print${parentType}${subType}Node(path as FastPath<${parentType}${subType}Node>, options, print);`,
+      `      return print${parentType}${subType}Node(node, path as FastPath<${parentType}${subType}Node>, options, print);`,
     );
   }
 }
