@@ -8,5 +8,13 @@ export function printModuleDefaultNode(
   options: ParserOptions,
   print: (path: FastPath<ASTNode>) => Doc,
 ): Doc {
-  return concat([path.call(print, 'header'), hardline, hardline, path.call(print, 'body'), hardline]);
+  console.log(JSON.stringify(node, null, 2));
+  const parts = [path.call(print, 'header')];
+
+  if (node.body.toplevels.length > 0) {
+    parts.push(hardline, hardline, path.call(print, 'body'));
+  }
+
+  parts.push(hardline);
+  return concat(parts);
 }
