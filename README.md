@@ -6,7 +6,7 @@
 [![Version](https://img.shields.io/npm/v/prettier-plugin-rascal.svg)](https://npmjs.org/package/prettier-plugin-rascal)
 [![License](https://img.shields.io/npm/l/prettier-plugin-rascal.svg)](https://github.com/jmerle/prettier-plugin-rascal/blob/master/LICENSE)
 
-**Uh-oh, it took me a while before I realised that going Rascal code to AST to formatted Rascal code is kind of a bad idea because the Rascal AST contains no information about comments or newlines, thereby causing valuable contextual information to get lost in the conversion. This project is no longer being worked on.**
+**Uh-oh, it took me a while before I realised that converting Rascal code to an AST to formatted Rascal code is kind of a bad idea because an AST contains no information about comments or newlines, thereby causing valuable contextual information to get lost in the conversion. This project is no longer being worked on.**
 
 Format Rascal code using Prettier.
 
