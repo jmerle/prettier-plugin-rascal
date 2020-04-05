@@ -23,8 +23,7 @@ object RascalParser {
     val ast = createAST(tree)
 
     try {
-      println(jsonObject("error" to ast.concreteSyntaxType))
-      //println(ast.accept(ASTConverter))
+      println(ast.accept(ASTConverter))
     } catch (err: Throwable) {
       val stringWriter = StringWriter()
       val printWriter = PrintWriter(stringWriter)
